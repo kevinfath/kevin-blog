@@ -3,10 +3,100 @@
   
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2018/02/22/hello-world/"/>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      <title>ubuntu下安装node版本管理工具NVM</title>
+      <link href="/2018/03/04/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7NVM/"/>
+      <content type="html"><![CDATA[<h5 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h5><p>nvm是nodejs的版本管理工具,因为nodejs编译非常麻烦，然后编译上有些又需要不同的版本，nvm就应运而生了，nvm是一个可以让你在同一台机器上安装和切换不同版本nodejs的工具。<br><a id="more"></a></p><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><hr><blockquote><p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh</a> | bash</p></blockquote><p>如果没有curl可以 <code>sudo apt install curl</code>一下<br>等进度条结束就安装好啦～^_^</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>终端输入<code>nvm</code>你就可以看到nvm的帮助信息了</p><h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><blockquote><p>nvm ls-remote      //列出全部可以安装的版本号<br>nvm install v7.7.0    //安装指定版本<br>nvm use v7.8.0        //切换nodejs的版本，效果是全局的哦<br>nvm current           //查看当前使用的版本<br>nvm ls                //查看系统当前使用版本</p></blockquote><hr><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>]]></content>
       
+      
+        <tags>
+            
+            <tag> nvm </tag>
+            
+            <tag> nodejs </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>acm C语言鸡兔同笼问题</title>
+      <link href="/2017/03/03/acm/"/>
+      <content type="html"><![CDATA[<p>描述</p><blockquote><p>浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。<br>童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。<br>随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的食物。一、二、三、四、五…他开始数了。<br>现在，他已经知道有这些鸽子和兔子一共有n个头和m只脚。请你帮他写个程序计算一下一共有多少只鸽子和兔子。</p></blockquote><a id="more"></a><p>输入</p><blockquote><p>输入包括多组数据。<br>每行包括2个数据：n、m(代表上面题目中提到的意思1≤n, m≤230)。<br>n、m都是整数。 </p></blockquote><p>输出</p><blockquote><p>每组数据的输出都只有一行，分别是鸽子的数量和兔子数量。<br>如果输入的测试数据不能求得结果，那肯定是redraiment这个马大哈数错了，就输出”Error”提示他。</p></blockquote><p>样例输入</p><blockquote><p>94 35<br>13</p></blockquote><p>样例输出</p><blockquote><p>12 23<br>error</p></blockquote><p>上代码</p><pre><code>#include &lt;stdio.h&gt;int main(){    int m,n,x,y;     scanf(&quot;%d,%d&quot;,&amp;m,&amp;n);    if (n&gt;=1,m&lt;=2^30 )    {        if ( m % 2 == 0 )        {            x=2*n-m/2;            y=m/2-n;            printf(&quot;%d,%d\n&quot;,x,y);        }        else        {            printf(&quot;error\n&quot;);        }    }    else    {        printf(&quot;error\n&quot;);    }    return 0;}</code></pre><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=5276807&auto=1&height=66"></iframe>]]></content>
+      
+      <categories>
+          
+          <category> acm编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> acm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>acm C语言求两个数最大值</title>
+      <link href="/2017/02/17/acm2/"/>
+      <content type="html"><![CDATA[<p>C语言实验题――两个数比较<br><a id="more"></a><br>描述</p><blockquote><p>求2个数中较大者。</p></blockquote><p>输入</p><blockquote><p>第一行为测试的数据组数N，接下来的N行分别是两个待比较的整数</p></blockquote><p>输出</p><blockquote><p>输出N行，每一行的值为每组数中较大的整数</p></blockquote><p>样例输入</p><blockquote><p>2<br>1   2<br>15  10</p></blockquote><p>样例输出</p><blockquote><p>2<br>15</p></blockquote><blockquote><p>#include &lt;stdio.h&gt;<br>int a,b;<br>int main(int argc, char const *argv[])<br>{<br>    scanf(“%d,%d”,&amp;a,&amp;b);<br>    if (a&gt;b)<br>    {<br>        printf(“%d\n”, a);<br>    }<br>    else<br>    {<br>        printf(“%d\n”, b );<br>    }<br>    return 0;<br>}</p></blockquote><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>]]></content>
+      
+      <categories>
+          
+          <category> acm编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> acm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>linux下实现计划任务的方法</title>
+      <link href="/2017/02/16/linux2/"/>
+      <content type="html"><![CDATA[<p>linux下实行计划任务的方法</p><ol><li>执行一次性任务可以用at命令，比如你要设置一个明天上午10点输出hello world：<blockquote><p>at 10.00 tomorrow<br>at &gt;etho“hello world”</p></blockquote></li></ol><a id="more"></a><p>ctrl+D结束输入</p><blockquote><p>job 1 at 2017-2-16 10:00</p></blockquote><p>这样就ok了</p><p>2.如果要设置周期性任务，可以用crontab命令来完成，“crontab -e”编辑cron表，“crontab -l”查看当前cron表，“crontab -r“删除当前cron表，”crontab -u 用户名”以某用户的身份控制cron表。</p><p>crontab -e 编辑cron表，这时会打开vi，按“i”进入编辑模式，<br>依此输入 “分钟  小时 日 月 周 [用户名]  命令”<br>如：我想在2017.2.16，4点输出i love you</p><blockquote><p>*  4  16  2  *  etho“i love you”</p></blockquote><p>cron时间符号</p><blockquote><p>*  代表任意时间<br>，代表分隔出不连续点，如2.5.7<br>-  代表连续点。如2-4， 表示2.3.4<br>  */  表示每隔单位时间</p></blockquote><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>]]></content>
+      
+      <categories>
+          
+          <category> linux命令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>linux下修改文件所属用户组和文件权限的方法</title>
+      <link href="/2017/02/15/linux/"/>
+      <content type="html"><![CDATA[<p>linux下修改文件所属用户组和修改文件权限的方法</p><ol><li>修改文件所属用户组的命令是chown，这个命令的格式是</li></ol><blockquote><p>chown    [-R]    username  filename<br>chown    [-R]    username:group filename</p></blockquote><a id="more"></a><p>第一个是修改文件所属的的用户，第二个修改文件所属用户组,-R属性为可选属性，意思是递归修改，也就是把文件下所有文件，包括子目录一起修改，大多数情况下-R 属性都是这个意思。</p><p>2.修改文件权限的命令是chmod，这个命令的格式是有两种设置方法有数字法与文字法i，数字法</p><p>就是用数字来代替rwx，r、w、x分别对应4、2、1，这个命令的格式为</p><blockquote><p>chmod  [-R]  xyz  filename</p></blockquote><p>其中x代表owner权限，y代表group权限，z代表others权限，以上三种身份的值就是rwx的和，r代表读，w写 ，x运行，如果没有相应的权限则值为0。<br>如想设置.bashrc文件的权限为owner为rwx，group权限为无，others权限为无，则命令如下</p><blockquote><p>chmod 700 .bashrc</p></blockquote><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>]]></content>
+      
+      <categories>
+          
+          <category> linux命令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
       
     </entry>
     

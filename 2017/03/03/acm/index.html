@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>tags | kevin-blog</title>
+  <title>acm C语言鸡兔同笼问题 | kevin-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Kevin,Kevin's Blog" />
   
-  <meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://www.kevinfaith.cn/tags/index.html">
+  <meta name="description" content="描述  浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的">
+<meta name="keywords" content="acm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="acm C语言鸡兔同笼问题">
+<meta property="og:url" content="http://www.kevinfaith.cn/2017/03/03/acm/index.html">
 <meta property="og:site_name" content="kevin-blog">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="描述  浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-25T08:40:50.341Z">
+<meta property="og:updated_time" content="2018-03-04T08:07:28.082Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="acm C语言鸡兔同笼问题">
+<meta name="twitter:description" content="描述  浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的">
   
   
     <link rel="icon" href="http://ww4.sinaimg.cn/large/0060lm7Tly1fostskt41kj301s01sjrk.jpg">
@@ -109,20 +110,27 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-acm" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      tags
+      acm C语言鸡兔同笼问题
     </h1>
     <div class="post-title-bar">
       <ul>
           
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/acm编程/">acm编程</a>
+                  
+              </li>
+          
         <li>
-          <i class="fa fa-calendar"></i>  2018-02-25
+          <i class="fa fa-calendar"></i>  2017-03-03
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -135,14 +143,61 @@
           
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+    <div class="article-entry post-content" itemprop="articleBody">
       
             
-            
+            <p>描述</p>
+<blockquote>
+<p>浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。<br>童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。<br>随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的食物。一、二、三、四、五…他开始数了。<br>现在，他已经知道有这些鸽子和兔子一共有n个头和m只脚。请你帮他写个程序计算一下一共有多少只鸽子和兔子。</p>
+</blockquote>
+<a id="more"></a>
+<p>输入</p>
+<blockquote>
+<p>输入包括多组数据。<br>每行包括2个数据：n、m(代表上面题目中提到的意思1≤n, m≤230)。<br>n、m都是整数。 </p>
+</blockquote>
+<p>输出</p>
+<blockquote>
+<p>每组数据的输出都只有一行，分别是鸽子的数量和兔子数量。<br>如果输入的测试数据不能求得结果，那肯定是redraiment这个马大哈数错了，就输出”Error”提示他。</p>
+</blockquote>
+<p>样例输入</p>
+<blockquote>
+<p>94 35<br>13</p>
+</blockquote>
+<p>样例输出</p>
+<blockquote>
+<p>12 23<br>error</p>
+</blockquote>
+<p>上代码</p>
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+    int m,n,x,y; 
+    scanf(&quot;%d,%d&quot;,&amp;m,&amp;n);
+    if (n&gt;=1,m&lt;=2^30 )
+    {
+        if ( m % 2 == 0 )
+        {
+            x=2*n-m/2;
+            y=m/2-n;
+            printf(&quot;%d,%d\n&quot;,x,y);
+        }
+        else
+        {
+            printf(&quot;error\n&quot;);
+        }
+    }
+    else
+    {
+        printf(&quot;error\n&quot;);
+    }
+    return 0;
+}
+</code></pre><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=5276807&auto=1&height=66"></iframe>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年02月25日 16:40</p>
-        <p>原始链接： <a class="post-url" href="/tags/index.html" title="tags">http://www.kevinfaith.cn/tags/index.html</a></p>
+        <p>最后更新： 2018年03月04日 16:07</p>
+        <p>原始链接： <a class="post-url" href="/2017/03/03/acm/" title="acm C语言鸡兔同笼问题">http://www.kevinfaith.cn/2017/03/03/acm/</a></p>
         <footer>
             <a href="http://www.kevinfaith.cn">
                 <img src="/images/logo.png" alt="kevin">
@@ -199,7 +254,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/tags/&title=《tags》 — kevin-blog&pic=http://www.kevinfaith.cnimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/2017/03/03/acm/&title=《acm C语言鸡兔同笼问题》 — kevin-blog&pic=http://ww3.sinaimg.cn/large/0060lm7Tly1fp0ukt9uwgj30fh09f0tu.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -209,22 +264,24 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/tags/&title=《tags》 — kevin-blog&source=blog" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/2017/03/03/acm/&title=《acm C语言鸡兔同笼问题》 — kevin-blog&source=描述
+
+浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，..." data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/tags/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/2017/03/03/acm/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《tags》 — kevin-blog&url=http://www.kevinfaith.cn/tags/&via=http://www.kevinfaith.cn" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《acm C语言鸡兔同笼问题》 — kevin-blog&url=http://www.kevinfaith.cn/2017/03/03/acm/&via=http://www.kevinfaith.cn" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/tags/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/2017/03/03/acm/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -234,7 +291,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/tags/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/2017/03/03/acm/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -243,6 +300,13 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/acm/" class="color4">acm</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -250,6 +314,26 @@
 </article>
 
 
+
+<nav id="article-nav">
+  
+    <a href="/2018/03/04/ubuntu下安装node版本管理工具NVM/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          ubuntu下安装node版本管理工具NVM
+        
+      </span>
+    </a>
+  
+  
+    <a href="/2017/02/17/acm2/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">acm C语言求两个数最大值</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -261,9 +345,9 @@
 <div class="article-footer-copyright">
 <center>本文由<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
-<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/tags/index.html" target="_blank" title="tags">tags</a></b></center>
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/2017/03/03/acm/" target="_blank" title="acm C语言鸡兔同笼问题">acm C语言鸡兔同笼问题</a></b></center>
 
-<center>本文链接为<b><a href="/tags/index.html" target="_blank" title="tags">http://www.kevinfaith.cn/tags/index.html</a></b>.</center>
+<center>本文链接为<b><a href="/2017/03/03/acm/" target="_blank" title="acm C语言鸡兔同笼问题">http://www.kevinfaith.cn/2017/03/03/acm/</a></b>.</center>
 </div>
 <! -- 添加版权信息 -->
 

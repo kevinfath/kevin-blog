@@ -3,22 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>tags | kevin-blog</title>
+  <title>ubuntu下安装node版本管理工具NVM | kevin-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Kevin,Kevin's Blog" />
   
-  <meta name="description" content="blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://www.kevinfaith.cn/tags/index.html">
+  <meta name="description" content="概述：nvm是nodejs的版本管理工具,因为nodejs编译非常麻烦，然后编译上有些又需要不同的版本，nvm就应运而生了，nvm是一个可以让你在同一台机器上安装和切换不同版本nodejs的工具。">
+<meta name="keywords" content="nvm,nodejs,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ubuntu下安装node版本管理工具NVM">
+<meta property="og:url" content="http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/index.html">
 <meta property="og:site_name" content="kevin-blog">
-<meta property="og:description" content="blog">
+<meta property="og:description" content="概述：nvm是nodejs的版本管理工具,因为nodejs编译非常麻烦，然后编译上有些又需要不同的版本，nvm就应运而生了，nvm是一个可以让你在同一台机器上安装和切换不同版本nodejs的工具。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-02-25T08:40:50.341Z">
+<meta property="og:updated_time" content="2018-03-04T08:01:37.309Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="blog">
+<meta name="twitter:title" content="ubuntu下安装node版本管理工具NVM">
+<meta name="twitter:description" content="概述：nvm是nodejs的版本管理工具,因为nodejs编译非常麻烦，然后编译上有些又需要不同的版本，nvm就应运而生了，nvm是一个可以让你在同一台机器上安装和切换不同版本nodejs的工具。">
   
   
     <link rel="icon" href="http://ww4.sinaimg.cn/large/0060lm7Tly1fostskt41kj301s01sjrk.jpg">
@@ -109,20 +110,20 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-ubuntu下安装node版本管理工具NVM" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      tags
+      ubuntu下安装node版本管理工具NVM
     </h1>
     <div class="post-title-bar">
       <ul>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-02-25
+          <i class="fa fa-calendar"></i>  2018-03-04
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -135,14 +136,26 @@
           
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+    <div class="article-entry post-content" itemprop="articleBody">
       
             
-            
+            <h5 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h5><p>nvm是nodejs的版本管理工具,因为nodejs编译非常麻烦，然后编译上有些又需要不同的版本，nvm就应运而生了，nvm是一个可以让你在同一台机器上安装和切换不同版本nodejs的工具。<br><a id="more"></a></p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><hr>
+<blockquote>
+<p>curl -o- <a href="https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/creationix/nvm/v0.33.1/install.sh</a> | bash</p>
+</blockquote>
+<p>如果没有curl可以 <code>sudo apt install curl</code>一下<br>等进度条结束就安装好啦～^_^</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>终端输入<code>nvm</code>你就可以看到nvm的帮助信息了</p>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><blockquote>
+<p>nvm ls-remote      //列出全部可以安装的版本号<br>nvm install v7.7.0    //安装指定版本<br>nvm use v7.8.0        //切换nodejs的版本，效果是全局的哦<br>nvm current           //查看当前使用的版本<br>nvm ls                //查看系统当前使用版本</p>
+</blockquote>
+<hr>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年02月25日 16:40</p>
-        <p>原始链接： <a class="post-url" href="/tags/index.html" title="tags">http://www.kevinfaith.cn/tags/index.html</a></p>
+        <p>最后更新： 2018年03月04日 16:01</p>
+        <p>原始链接： <a class="post-url" href="/2018/03/04/ubuntu下安装node版本管理工具NVM/" title="ubuntu下安装node版本管理工具NVM">http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/</a></p>
         <footer>
             <a href="http://www.kevinfaith.cn">
                 <img src="/images/logo.png" alt="kevin">
@@ -199,7 +212,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/tags/&title=《tags》 — kevin-blog&pic=http://www.kevinfaith.cnimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/&title=《ubuntu下安装node版本管理工具NVM》 — kevin-blog&pic=http://ww4.sinaimg.cn/large/0060lm7Tly1fp0tyluptij31kw0w0x6p.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -209,22 +222,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/tags/&title=《tags》 — kevin-blog&source=blog" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/&title=《ubuntu下安装node版本管理工具NVM》 — kevin-blog&source=概述：nvm是nodejs的版本管理工具,因为nodejs编译非常麻烦，然后编译上有些又需要不同的版本，nvm就应运而生了，nvm是一个可以让你在同一台机..." data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/tags/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《tags》 — kevin-blog&url=http://www.kevinfaith.cn/tags/&via=http://www.kevinfaith.cn" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ubuntu下安装node版本管理工具NVM》 — kevin-blog&url=http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/&via=http://www.kevinfaith.cn" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/tags/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -234,7 +247,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/tags/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -243,6 +256,17 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/nvm/" class="color4">nvm</a>
+      
+    <a href="/tags/nodejs/" class="color2">nodejs</a>
+      
+    <a href="/tags/linux/" class="color1">linux</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -250,6 +274,22 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#概述："><span class="post-toc-text">概述：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装"><span class="post-toc-text">安装</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用"><span class="post-toc-text">使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常用命令"><span class="post-toc-text">常用命令</span></a>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/03/acm/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">acm C语言鸡兔同笼问题</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -261,9 +301,9 @@
 <div class="article-footer-copyright">
 <center>本文由<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
-<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/tags/index.html" target="_blank" title="tags">tags</a></b></center>
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/2018/03/04/ubuntu下安装node版本管理工具NVM/" target="_blank" title="ubuntu下安装node版本管理工具NVM">ubuntu下安装node版本管理工具NVM</a></b></center>
 
-<center>本文链接为<b><a href="/tags/index.html" target="_blank" title="tags">http://www.kevinfaith.cn/tags/index.html</a></b>.</center>
+<center>本文链接为<b><a href="/2018/03/04/ubuntu下安装node版本管理工具NVM/" target="_blank" title="ubuntu下安装node版本管理工具NVM">http://www.kevinfaith.cn/2018/03/04/ubuntu下安装node版本管理工具NVM/</a></b>.</center>
 </div>
 <! -- 添加版权信息 -->
 
