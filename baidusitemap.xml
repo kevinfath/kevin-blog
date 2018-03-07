@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+  <url>
+    <loc>http://www.kevinfaith.cn/2017/02/16/linux2/</loc>
+    <lastmod>2018-03-04T08:12:36.387Z</lastmod>
+    <data>
+        <display>
+        <title>linux下实现计划任务的方法</title>
+        <pubTime>2017-02-15T16:00:00.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn/2017/02/15/linux/</loc>
+    <lastmod>2018-03-04T08:08:37.927Z</lastmod>
+    <data>
+        <display>
+        <title>linux下修改文件所属用户组和文件权限的方法</title>
+        <pubTime>2017-02-14T16:00:00.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn/2017/03/03/acm/</loc>
+    <lastmod>2018-03-04T08:07:28.082Z</lastmod>
+    <data>
+        <display>
+        <title>acm C语言鸡兔同笼问题</title>
+        <pubTime>2017-03-02T16:00:00.000Z</pubTime>
+        
+        <tag>acm</tag>
+         
+         
+           
+             
+              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn/2017/02/17/acm2/</loc>
+    <lastmod>2018-03-04T08:07:05.014Z</lastmod>
+    <data>
+        <display>
+        <title>acm C语言求两个数最大值</title>
+        <pubTime>2017-02-16T16:00:00.000Z</pubTime>
+        
+        <tag>acm</tag>
+         
+         
+           
+             
+              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn/2018/03/04/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7NVM/</loc>
+    <lastmod>2018-03-04T08:01:37.309Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu下安装node版本管理工具NVM</title>
+        <pubTime>2018-03-04T06:50:41.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>nvm</tag>
+         
+        <tag>nodejs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
