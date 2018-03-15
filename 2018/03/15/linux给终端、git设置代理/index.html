@@ -11,7 +11,7 @@
     <meta name="keywords" content="Kevin,Kevin's Blog" />
   
   <meta name="description" content="概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？">
-<meta name="keywords" content="linux,Shadowsocks">
+<meta name="keywords" content="linux,Shadowsocks,代理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux给终端、git设置代理">
 <meta property="og:url" content="http://www.kevinfaith.cn/2018/03/15/linux给终端、git设置代理/index.html">
@@ -20,7 +20,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tly1fpdqm9h3fbj30de0ebwf6.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1fpdqktbykaj30940emmy2.jpg">
-<meta property="og:updated_time" content="2018-03-15T13:04:12.925Z">
+<meta property="og:updated_time" content="2018-03-15T13:16:28.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux给终端、git设置代理">
 <meta name="twitter:description" content="概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？">
@@ -151,20 +151,19 @@
             
             <h5 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h5><p>因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？<br><a id="more"></a></p>
 <h5 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h5><p>Shadowsocks-qt5 polipo 一台搭建有ss服务的海外服务器</p>
-<h5 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h5><p>安装ss-qt5：</p>
-<pre><code>$ sudo add-apt-repository ppa:hzwhuang/ss-qt5 
+<h5 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h5><h6 id="安装ss-qt5："><a href="#安装ss-qt5：" class="headerlink" title="安装ss-qt5："></a>安装ss-qt5：</h6><pre><code>$ sudo add-apt-repository ppa:hzwhuang/ss-qt5 
 $ sudo apt-get update
 $ sudo apt-get install shadowsocks-qt5
-</code></pre><p>安装完成，打开软件<img src="http://ww1.sinaimg.cn/large/0060lm7Tly1fpdqm9h3fbj30de0ebwf6.jpg" alt=""><br>点击连接-&gt;添加-&gt;手动，输入服务器地址，端口，本地映射地址，本地端口，加密协议,保存，连接，就ojbk了。（怎么搭建Shadowsocks的教程请自行搜索，因为各种原因我就不一一陈诉了）这是我的配置截图：<img src="http://ww2.sinaimg.cn/large/0060lm7Tly1fpdqktbykaj30940emmy2.jpg" alt=""><br>安装polipo:<br>命令很简单</p>
+</code></pre><p>安装完成，打开软件<img src="http://ww1.sinaimg.cn/large/0060lm7Tly1fpdqm9h3fbj30de0ebwf6.jpg" alt=""><br>点击连接-&gt;添加-&gt;手动，输入服务器地址，端口，本地映射地址，本地端口，加密协议,保存，连接，就ojbk了。（怎么搭建Shadowsocks的教程请自行搜索，因为各种原因我就不一一陈诉了）这是我的配置截图：<img src="http://ww2.sinaimg.cn/large/0060lm7Tly1fpdqktbykaj30940emmy2.jpg" alt=""> </p>
+<h6 id="安装polipo"><a href="#安装polipo" class="headerlink" title="安装polipo:"></a>安装polipo:</h6><p>命令很简单</p>
 <pre><code>$ sudo apt-get install polipo
-</code></pre><p>修改配置文件：</p>
-<pre><code>$ vi etc/polipo/config
+</code></pre><h6 id="修改配置文件："><a href="#修改配置文件：" class="headerlink" title="修改配置文件："></a>修改配置文件：</h6><pre><code>$ vi etc/polipo/config
 </code></pre><p>原文件中已经有了两句话，那么需要新加入3句话：</p>
 <pre><code>socksParentProxy = &quot;127.0.0.1:1080&quot;  //这里对应着上面配置文件的本地地址和本地端口
 socksProxyType = socks5   //这里对应上面的本地服务器类型
 logLevel=4
-</code></pre><p>:wq 保存退出<br>关闭和启动polip:</p>
-<pre><code>$ sudo service polipo stop
+</code></pre><p>:wq 保存退出</p>
+<h6 id="关闭和启动polip"><a href="#关闭和启动polip" class="headerlink" title="关闭和启动polip:"></a>关闭和启动polip:</h6><pre><code>$ sudo service polipo stop
 $ sudo service polipo start
 </code></pre><h5 id="验证和使用："><a href="#验证和使用：" class="headerlink" title="验证和使用："></a>验证和使用：</h5><pre><code>$ curl ip.gs //查询你的IP地址和地理信息
 $ http_proxy=http://localhost:8123 curl ip.gs //使用代理以后的ip地址和地理信息，如果发现ip和地理信息已经改变了，表示成功
@@ -186,10 +185,12 @@ Country / 国家: Singapore
 </code></pre><p>但是这种方法在关机以后就不起效果了，需要重新输入一遍，<br>如果嫌麻烦，可以修改</p>
 <pre><code>$ vi ~/.gitconfig
 </code></pre><p>在[http]一行下面加入<code>proxy = http://127.0.0.1:8123</code>就可以一直奇效了</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=544566796&auto=1&height=66"></iframe>
+
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年03月15日 21:04</p>
+        <p>最后更新： 2018年03月15日 21:16</p>
         <p>原始链接： <a class="post-url" href="/2018/03/15/linux给终端、git设置代理/" title="linux给终端、git设置代理">http://www.kevinfaith.cn/2018/03/15/linux给终端、git设置代理/</a></p>
         <footer>
             <a href="http://www.kevinfaith.cn">
@@ -298,6 +299,8 @@ Country / 国家: Singapore
       
     <a href="/tags/Shadowsocks/" class="color2">Shadowsocks</a>
       
+    <a href="/tags/代理/" class="color3">代理</a>
+      
   </li>
 
         </ul>
@@ -309,7 +312,7 @@ Country / 国家: Singapore
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#概述："><span class="post-toc-text">概述：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#准备工具："><span class="post-toc-text">准备工具：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装步骤："><span class="post-toc-text">安装步骤：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#验证和使用："><span class="post-toc-text">验证和使用：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置别名"><span class="post-toc-text">设置别名</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#给git设置代理："><span class="post-toc-text">给git设置代理：</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#概述："><span class="post-toc-text">概述：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#准备工具："><span class="post-toc-text">准备工具：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装步骤："><span class="post-toc-text">安装步骤：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#安装ss-qt5："><span class="post-toc-text">安装ss-qt5：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#安装polipo"><span class="post-toc-text">安装polipo:</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#修改配置文件："><span class="post-toc-text">修改配置文件：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#关闭和启动polip"><span class="post-toc-text">关闭和启动polip:</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#验证和使用："><span class="post-toc-text">验证和使用：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置别名"><span class="post-toc-text">设置别名</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#给git设置代理："><span class="post-toc-text">给git设置代理：</span></a></li></ol>
         </nav>
     </aside>
     
@@ -398,7 +401,7 @@ Country / 国家: Singapore
             <a class="category-link" href="/categories/acm编程/">acm编程</a><a class="category-link" href="/categories/linux命令/">linux命令</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/acm/" style="font-size: 15px;">acm</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
+            <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/acm/" style="font-size: 15px;">acm</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -437,7 +440,7 @@ Country / 国家: Singapore
     <div class="mobile-header-tag-container">
         <span class="title">Tags</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/acm/" style="font-size: 15px;">acm</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a>
+            <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/acm/" style="font-size: 15px;">acm</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a>
         </div>
     </div>
 </div>
