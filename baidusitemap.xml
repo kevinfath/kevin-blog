@@ -3,6 +3,46 @@
 
 
     
+  <url>
+    <loc>http://www.kevinfaith.cn/2018/03/15/linux%E7%BB%99%E7%BB%88%E7%AB%AF%E3%80%81git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</loc>
+    <lastmod>2018-03-15T13:04:12.925Z</lastmod>
+    <data>
+        <display>
+        <title>linux给终端、git设置代理</title>
+        <pubTime>2018-03-15T12:43:20.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>Shadowsocks</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn/2018/03/04/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7NVM/</loc>
+    <lastmod>2018-03-15T12:57:45.555Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu下安装node版本管理工具NVM</title>
+        <pubTime>2018-03-04T06:50:41.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>nvm</tag>
+         
+        <tag>nodejs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
     
     
     
@@ -81,27 +121,6 @@
              
               <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.kevinfaith.cn/2018/03/04/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7NVM/</loc>
-    <lastmod>2018-03-04T08:01:37.309Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu下安装node版本管理工具NVM</title>
-        <pubTime>2018-03-04T06:50:41.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>nvm</tag>
-         
-        <tag>nodejs</tag>
-         
-         
-           
         </display>
     </data>
     </url>
