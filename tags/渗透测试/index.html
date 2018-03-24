@@ -5,23 +5,21 @@
 <meta name="baidu-site-verification" content="4PgRGQUa1v" />
   <meta charset="utf-8">
   
-  <title>linux下修改文件所属用户组和文件权限的方法 | kevin-blog</title>
+  <title>Tag: 渗透测试 | kevin-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Kevin,Kevin's Blog" />
   
-  <meta name="description" content="linux下修改文件所属用户组和修改文件权限的方法  修改文件所属用户组的命令是chown，这个命令的格式是   chown    [-R]    username  filenamechown    [-R]    username:group filename">
-<meta name="keywords" content="linux">
-<meta property="og:type" content="article">
-<meta property="og:title" content="linux下修改文件所属用户组和文件权限的方法">
-<meta property="og:url" content="http://www.kevinfaith.cn/2017/02/15/linux/index.html">
+  <meta name="description" content="blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="kevin-blog">
+<meta property="og:url" content="http://www.kevinfaith.cn/tags/渗透测试/index.html">
 <meta property="og:site_name" content="kevin-blog">
-<meta property="og:description" content="linux下修改文件所属用户组和修改文件权限的方法  修改文件所属用户组的命令是chown，这个命令的格式是   chown    [-R]    username  filenamechown    [-R]    username:group filename">
+<meta property="og:description" content="blog">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-04T08:08:37.927Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux下修改文件所属用户组和文件权限的方法">
-<meta name="twitter:description" content="linux下修改文件所属用户组和修改文件权限的方法  修改文件所属用户组的命令是chown，这个命令的格式是   chown    [-R]    username  filenamechown    [-R]    username:group filename">
+<meta name="twitter:title" content="kevin-blog">
+<meta name="twitter:description" content="blog">
   
   
     <link rel="icon" href="http://ww4.sinaimg.cn/large/0060lm7Tly1fostskt41kj301s01sjrk.jpg">
@@ -117,222 +115,55 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+        <section id="main" class="body-wrap">
   
-    <h1 class="post-title" itemprop="name">
-      linux下修改文件所属用户组和文件权限的方法
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" class="archive-article-date">
+  <time datetime="2018-03-24T12:39:13.000Z" itemprop="datePublished">03-24</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/03/24/介绍一款牛逼的社会工程学字典生成器/"  >介绍一款牛逼的渗透测试框架</a>
     </h1>
-    <div class="post-title-bar">
-      <ul>
-          
-              <li>
-                  <i class="fa fa-book"></i>
-                  
-                      <a href="/categories/linux命令/">linux命令</a>
-                  
-              </li>
-          
-        <li>
-          <i class="fa fa-calendar"></i>  2017-02-15
-        </li>
-        <li>
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_value_page_pv"></span>
-        </li>
-      </ul>
-    </div>
   
 
-          
-      </header>
-    
-    <div class="article-entry post-content" itemprop="articleBody">
+    </header>
       
-            
-            <p>linux下修改文件所属用户组和修改文件权限的方法</p>
-<ol>
-<li>修改文件所属用户组的命令是chown，这个命令的格式是</li>
-</ol>
-<blockquote>
-<p>chown    [-R]    username  filename<br>chown    [-R]    username:group filename</p>
-</blockquote>
-<a id="more"></a>
-<p>第一个是修改文件所属的的用户，第二个修改文件所属用户组,-R属性为可选属性，意思是递归修改，也就是把文件下所有文件，包括子目录一起修改，大多数情况下-R 属性都是这个意思。</p>
-<p>2.修改文件权限的命令是chmod，这个命令的格式是有两种设置方法有数字法与文字法i，数字法</p>
-<p>就是用数字来代替rwx，r、w、x分别对应4、2、1，这个命令的格式为</p>
-<blockquote>
-<p>chmod  [-R]  xyz  filename</p>
-</blockquote>
-<p>其中x代表owner权限，y代表group权限，z代表others权限，以上三种身份的值就是rwx的和，r代表读，w写 ，x运行，如果没有相应的权限则值为0。<br>如想设置.bashrc文件的权限为owner为rwx，group权限为无，others权限为无，则命令如下</p>
-<blockquote>
-<p>chmod 700 .bashrc</p>
-</blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>
-
-
-
-
-
-            <div class="post-copyright">
-    <div class="content">
-        <p>最后更新： 2018年03月04日 16:08</p>
-        <p>原始链接： <a class="post-url" href="/2017/02/15/linux/" title="linux下修改文件所属用户组和文件权限的方法">http://www.kevinfaith.cn/2017/02/15/linux/</a></p>
-        <footer>
-            <a href="http://www.kevinfaith.cn">
-                <img src="/images/logo.png" alt="kevin">
-                kevin
-            </a>
-        </footer>
-    </div>
-</div>
-
-      
-        
-            
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;">赏</a>
-</div>
-
-<div id="reward" class="post-modal reward-lay">
-    <a class="close" href="javascript:;" id="reward-close">×</a>
-    <span class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        请我吃糖~
-        <i class="icon icon-quote-right"></i>
-    </span>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
-        </div>
-        <div class="reward-select">
-            
-            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
-                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
-            </label>
-            
-            
-            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
-                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
-            </label>
-            
-        </div>
-    </div>
-</div>
-
-
-        
-    </div>
-    <footer class="article-footer">
-        
-        
-<div class="post-share">
-    <a href="javascript:;" id="share-sub" class="post-share-fab">
-        <i class="fa fa-share-alt"></i>
-    </a>
-    <div class="post-share-list" id="share-list">
-        <ul class="share-icons">
-          <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/2017/02/15/linux/&title=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&pic=http://ww1.sinaimg.cn/large/0060lm7Tly1fp0umf8c6vj30cb08caa5.jpg" data-title="微博">
-              <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          <li>
-            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
-              <i class="fa fa-weixin"></i>
-            </a>
-          </li>
-          <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/2017/02/15/linux/&title=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&source=linux下修改文件所属用户组和修改文件权限的方法
-
-修改文件所属用户组的命令是chown，这个命令的格式是
-
-
-chown    [-R]    use..." data-title="QQ">
-              <i class="fa fa-qq"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/2017/02/15/linux/" data-title="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&url=http://www.kevinfaith.cn/2017/02/15/linux/&via=http://www.kevinfaith.cn" data-title="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/2017/02/15/linux/" data-title="Google+">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-     </div>
-</div>
-<div class="post-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" id="wxShare-close">×</a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/2017/02/15/linux/" alt="微信分享二维码">
-</div>
-
-<div class="mask"></div>
-
-        
-        <ul class="article-footer-menu">
-            
+        <div class="archive-post-footer">
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/linux/" class="color1">linux</a>
+    <a href="/tags/渗透测试/" class="color5">渗透测试</a>
+      
+    <a href="/tags/kali/" class="color5">kali</a>
       
   </li>
 
-        </ul>
-        
-    </footer>
+        </div>
+      
   </div>
 </article>
 
-
-
-<nav id="article-nav">
-  
-    <a href="/2017/02/16/linux2/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          linux下实现计划任务的方法
-        
-      </span>
-    </a>
   
   
-</nav>
+    </div></section>
+  
 
-
-
-    
-
-
-
-            <! -- 添加版权信息 -->
-<div class="article-footer-copyright">
-<center>本文由<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
-
-<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/2017/02/15/linux/" target="_blank" title="linux下修改文件所属用户组和文件权限的方法">linux下修改文件所属用户组和文件权限的方法</a></b></center>
-
-<center>本文链接为<b><a href="/2017/02/15/linux/" target="_blank" title="linux下修改文件所属用户组和文件权限的方法">http://www.kevinfaith.cn/2017/02/15/linux/</a></b>.</center>
-</div>
-<! -- 添加版权信息 -->
-
-        
 </section>
         
       </div>

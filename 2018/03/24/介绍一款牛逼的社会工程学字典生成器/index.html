@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="google-site-verification" content="2RMRpp2b5B4gQSDMrHZV0xFOWBUFs_cgHUtxiqCML70" />
+<meta name="baidu-site-verification" content="4PgRGQUa1v" />
+  <meta charset="utf-8">
+  
+  <title>介绍一款牛逼的渗透测试框架 | kevin-blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="Kevin,Kevin's Blog" />
+  
+  <meta name="description" content="简介工欲善其事必先利其器，一件好的工具能给我们渗透测试提高很多效率，今天就介绍一款我个人觉得非常牛逼的渗透测试框架，———PentestDB（https://github.com/alpha1e0/pentestdb.git）">
+<meta name="keywords" content="渗透测试,kali">
+<meta property="og:type" content="article">
+<meta property="og:title" content="介绍一款牛逼的渗透测试框架">
+<meta property="og:url" content="http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/index.html">
+<meta property="og:site_name" content="kevin-blog">
+<meta property="og:description" content="简介工欲善其事必先利其器，一件好的工具能给我们渗透测试提高很多效率，今天就介绍一款我个人觉得非常牛逼的渗透测试框架，———PentestDB（https://github.com/alpha1e0/pentestdb.git）">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-24T13:46:40.231Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="介绍一款牛逼的渗透测试框架">
+<meta name="twitter:description" content="简介工欲善其事必先利其器，一件好的工具能给我们渗透测试提高很多效率，今天就介绍一款我个人觉得非常牛逼的渗透测试框架，———PentestDB（https://github.com/alpha1e0/pentestdb.git）">
+  
+  
+    <link rel="icon" href="http://ww4.sinaimg.cn/large/0060lm7Tly1fostskt41kj301s01sjrk.jpg">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Kevin&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>归档</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于</span>
+                    </a>
+                    
+                    <a  href="/bitcoin">
+                        <i class="fa fa-bitcoin"></i>
+                        <span>挖矿</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Kevin&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        我本微末凡尘，却也心向天空
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow"  href="//kevinfaith.cn">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/kevinfath">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/6412763822">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Telegram" target="_blank" href="//telegram.org/dl">
+                            <i class="fa fa-telegram fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-介绍一款牛逼的社会工程学字典生成器" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      介绍一款牛逼的渗透测试框架
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-03-24
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>工欲善其事必先利其器，一件好的工具能给我们渗透测试提高很多效率，今天就介绍一款我个人觉得非常牛逼的渗透测试框架，———PentestDB（<a href="https://github.com/alpha1e0/pentestdb.git）" target="_blank" rel="noopener">https://github.com/alpha1e0/pentestdb.git）</a><br><a id="more"></a></p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>PentestDB支持windows/linux/macos，需安装python 2.6.x 或 2.7.x运行。</p>
+<pre><code>git clone https://github.com/alpha1e0/pentestdb.git
+</code></pre><h6 id="安装依赖："><a href="#安装依赖：" class="headerlink" title="安装依赖："></a>安装依赖：</h6><p>项目中的脚本文件依赖于lxml，linux系统一般默认安装lxml，如果没有可通过以下方式安装：</p>
+<pre><code>pip install lxml
+apt-get install lxml
+yum install lxml
+</code></pre><p>windows用户：<br>我对windows不怎么了解，具体就自行百度了。</p>
+<h6 id="解决nmap依赖"><a href="#解决nmap依赖" class="headerlink" title="解决nmap依赖"></a>解决nmap依赖</h6><p>项目中的C段扫描依赖于nmap扫描器，到<code>https://nmap.org/download.html</code>下载nmap，在windows下需要设置环境变量，让系统能够找到nmap.exe。还是那句话，在windows下怎么添加环境变量，我就不班门弄斧了，自行百度吧。linux是不需要的。</p>
+<h5 id="使用："><a href="#使用：" class="headerlink" title="使用："></a>使用：</h5><h6 id="1-Exploit系统"><a href="#1-Exploit系统" class="headerlink" title="1.Exploit系统"></a>1.Exploit系统</h6><p><code>pen.py</code>的exploit子命令提供了exploit模块相关操作，exploit模块是一个轻量级的exploit框架，可以编写各种web漏洞的exploit：</p>
+<ul>
+<li>搜索exploit信息</li>
+<li>增加、删除、修改exploit信息</li>
+<li>执行某个exploit</li>
+<li>搜索并批量执行exploit<br>exploit保存在项目根目录下的exploit目录下<br>例如：</li>
+</ul>
+<pre><code>#列举、搜索、注册、更新、删除
+pen.py exploit -l
+pen.py exploit -q appName:joomla
+pen.py exploit --register exploit
+pen.py exploit --update cms_joomla_3_4_session_object_injection.py
+pen.py exploit -d &quot;Joomla 1.5~3.4 session对象注入漏洞exploit&quot;
+pen.py exploit --detail &quot;Joomla 1.5~3.4 session对象注入漏洞exploit&quot; 
+
+
+#执行exploit
+pen.py exploit -e cms_joomla_3_4_session_object_injection.py -u http://127.0.0.1:1234 --attack
+pen.py exploit -s appName:joomla -u http://127.0.0.1:1234 --verify
+pen.py exploit -s appName:joomla -u @url.txt
+</code></pre><h6 id="2-服务端应用识别"><a href="#2-服务端应用识别" class="headerlink" title="2.服务端应用识别"></a>2.服务端应用识别</h6><p><code>pen.py</code>的service子命令提供了服务端应用识别的功能，能够识别服务器信息，包括：</p>
+<pre><code>操作系统 web服务器 web中间件 CMS等
+</code></pre><p>例如：</p>
+<pre><code>pen.py service http://xxx.com
+# 开启CMS识别加强模式
+pen.py service http://xxx.com --cms
+</code></pre><h6 id="3-社工密码字典生成"><a href="#3-社工密码字典生成" class="headerlink" title="3.社工密码字典生成"></a>3.社工密码字典生成</h6><p><code>pen.py</code>的password子命令提供了根据社工信息生成密码字典的功能，能够设置不同关键字生成密码字典</p>
+<p>该模块可通过以下要素组合生成密码：</p>
+<ul>
+<li>全名，–fullname，名字中各个字中间加空格，例如”lin zhi ling”</li>
+<li>昵称，–nickname</li>
+<li>英文名称，–englishname</li>
+<li>伴侣名字，–partnername</li>
+<li>生日，–birthday</li>
+<li>手机号，–phone</li>
+<li>QQ号，–qq</li>
+<li>公司名称，–company</li>
+<li>域名，–domian</li>
+<li>老密码，–oldpasswd</li>
+<li>关键字，–keyword</li>
+<li>关键数字，–keynumbers</li>
+</ul>
+<p>例如：</p>
+<pre><code>pen.py passwdgen --fullname &quot;lin zhi ling&quot; --birthday 1980-1-1 --phone 12344445555 --qq 34233888 -o password.txt
+</code></pre><h6 id="4-URI敏感文件爆破"><a href="#4-URI敏感文件爆破" class="headerlink" title="4.URI敏感文件爆破"></a>4.URI敏感文件爆破</h6><p><code>pen.py</code>的uribrute子命令提供了URI敏感文件爆破，URI爆破字典生成的功能</p>
+<p>例如：</p>
+<pre><code># 生成web打包备份、敏感文件字典，后缀名使用jsp和jspx，自定义关键字xxx，指定输出结果dict.txt
+pen.py uribrute -t webbak,interestfile -e jspx,jsp --keyword &quot;xxx&quot; -o dict.txt
+
+# 爆破目标站点，使用safeurl bypass waf
+pen.py uribrute -b -u http://127.0.0.1/discuz/6.0/ --safeurl &quot;http://127.0.0.1/discuz/6.0/&quot;
+
+#  爆破url.txt中的所有站点，爆破敏感文件，自定义notfound页面关键字为“找不到页面”
+pen.py uribrute -b -u @urls.txt -t interestfile --notfound &quot;找不到页面&quot;
+</code></pre><h6 id="5-Google-Hacking功能"><a href="#5-Google-Hacking功能" class="headerlink" title="5.Google Hacking功能"></a>5.Google Hacking功能</h6><p><code>pen.py</code>的search子命令提供了Google Hacking的功能，目前支持以下搜索引擎：</p>
+<ul>
+<li>bing</li>
+<li>google</li>
+<li>baidu</li>
+</ul>
+<p>例如：</p>
+<pre><code>pen.py search &quot;inurl:viewthread.php&quot; -s 10 -o tmp.txt
+
+# --unique设定域名唯一，相同域名只记录一个搜索结果:
+pen.py search &quot;inurl:viewthread.php&quot; -s 10 --unique -o tmp.txt
+</code></pre><p>注意，由于百度关闭了 localsearch 功能，因此目前 baidu 方式目前暂不可用。</p>
+<h6 id="6-子域名爆破"><a href="#6-子域名爆破" class="headerlink" title="6.子域名爆破"></a>6.子域名爆破</h6><p><code>pen.py</code>的domain子命令提供了子域名爆破功能：</p>
+<ul>
+<li>域传送漏洞检测、利用</li>
+<li>DNS字典爆破</li>
+<li>Google Hacking搜索</li>
+</ul>
+<p>注：支持输出到html文件，使用<em>-o xxx.html</em>做为输出文件即可<br>例如：</p>
+<pre><code># 使用域传送技术、Google Hacking对aaa.com 进行子域名爆破
+pen.py domamin aaa.com -t zg
+
+# 使用字典爆破子域名，自定义字典文件domain_large.txt，同时指定爆破顶级域名
+pen.py domain aaa.com -t d --dict domain_large.txt --topdomian
+</code></pre><h6 id="7-C段扫描"><a href="#7-C段扫描" class="headerlink" title="7.C段扫描"></a>7.C段扫描</h6><p><code>pen.py</code>的subnet子命令提供了C段扫描功能。</p>
+<p>注：支持输出到html文件，使用<em>-o xxx.html</em>做为输出文件即可</p>
+<p>例如：</p>
+<pre><code>pen.py subnet test.com -o result.html
+</code></pre><h6 id="8-编码"><a href="#8-编码" class="headerlink" title="8.编码"></a>8.编码</h6><p><code>pen.py</code>的encode子命令提供了编码的功能</p>
+<p>编码方式<em>-t/–type</em>支持：</p>
+<blockquote>
+<p>url url-all hex decimal unicode unicode-all md5 sha base64 base32 html html-all php-chr utf7 utf7-all<br>其中**-all编码会编码所有字符包括非特殊字符</p>
+</blockquote>
+<p>非ASCII编码<em>-m/–method</em>支持：</p>
+<blockquote>
+<p>utf8 gbk gb2312 big5 utf16 utf7 等所有python支持的编码方式</p>
+</blockquote>
+<p>例如：</p>
+<pre><code>pen.py encode -t unicode &quot;aaa=你好&quot;
+pen.py encode -t url-all -m gbk &quot;id=你好&quot;
+pen.py encode -t md5 &quot;aaaaaaaa&quot;
+</code></pre><h6 id="9-解码"><a href="#9-解码" class="headerlink" title="9.解码"></a>9.解码</h6><p><code>pen.py</code>的decode子命令提供了解码的功能，并提供非ASCII编码编码推测功能</p>
+<p>解码方式<em>-t/–type</em>支持：</p>
+<blockquote>
+<p>auto(默认) hex url unicode decimal base64 base32 html php-chr utf7<br>其中auto方式会自动检测url类型、hex类型的字符串并进行解码</p>
+</blockquote>
+<p>非ASCII编码<em>-m/–method</em>支持：</p>
+<blockquote>
+<p>utf8 gbk gb2312 big5 utf16 utf7 等所有python支持的编码方式</p>
+</blockquote>
+<p>例如：</p>
+<pre><code>pen.py decode -t base64 5ZOI5ZOI
+pen.py decode -m utf8 aaa%E5%93%88%E5%93%88
+pen.py encode -t hex &quot;\x61\x61\xe5\x93\x88\xe5\x93\x88&quot;
+
+# 推测编码
+pen.py decode -d &quot;\x61\x61\xe5\x93\x88\xe5\x93\x88&quot;
+</code></pre><p>我就列举了一些常用的功能，还有很多非常不错的功能，如“ Mail账户验证/爆破”、“文件处理功能”，“字典维护”等等。<br>我就不一一列举了，感兴趣的可以去项目地址自行查看“<a href="https://github.com/alpha1e0/pentestdb.git”。" target="_blank" rel="noopener">https://github.com/alpha1e0/pentestdb.git”。</a></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年03月24日 21:46</p>
+        <p>原始链接： <a class="post-url" href="/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" title="介绍一款牛逼的渗透测试框架">http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/</a></p>
+        <footer>
+            <a href="http://www.kevinfaith.cn">
+                <img src="/images/logo.png" alt="kevin">
+                kevin
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/&title=《介绍一款牛逼的渗透测试框架》 — kevin-blog&pic=https://s1.ax2x.com/2018/03/24/KKITJ.jpg" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/&title=《介绍一款牛逼的渗透测试框架》 — kevin-blog&source=简介工欲善其事必先利其器，一件好的工具能给我们渗透测试提高很多效率，今天就介绍一款我个人觉得非常牛逼的渗透测试框架，———PentestDB（https:..." data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《介绍一款牛逼的渗透测试框架》 — kevin-blog&url=http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/&via=http://www.kevinfaith.cn" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/渗透测试/" class="color5">渗透测试</a>
+      
+    <a href="/tags/kali/" class="color5">kali</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#简介"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装"><span class="post-toc-text">安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#安装依赖："><span class="post-toc-text">安装依赖：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#解决nmap依赖"><span class="post-toc-text">解决nmap依赖</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#使用："><span class="post-toc-text">使用：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#1-Exploit系统"><span class="post-toc-text">1.Exploit系统</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#2-服务端应用识别"><span class="post-toc-text">2.服务端应用识别</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#3-社工密码字典生成"><span class="post-toc-text">3.社工密码字典生成</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-URI敏感文件爆破"><span class="post-toc-text">4.URI敏感文件爆破</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-Google-Hacking功能"><span class="post-toc-text">5.Google Hacking功能</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-子域名爆破"><span class="post-toc-text">6.子域名爆破</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-C段扫描"><span class="post-toc-text">7.C段扫描</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#8-编码"><span class="post-toc-text">8.编码</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#9-解码"><span class="post-toc-text">9.解码</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/15/linux给终端、git设置代理/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">linux给终端、git设置代理</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+
+
+
+            <! -- 添加版权信息 -->
+<div class="article-footer-copyright">
+<center>本文由<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
+
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" target="_blank" title="介绍一款牛逼的渗透测试框架">介绍一款牛逼的渗透测试框架</a></b></center>
+
+<center>本文链接为<b><a href="/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" target="_blank" title="介绍一款牛逼的渗透测试框架">http://www.kevinfaith.cn/2018/03/24/介绍一款牛逼的社会工程学字典生成器/</a></b>.</center>
+</div>
+<! -- 添加版权信息 -->
+
+        
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+          <a href="/" target="_blank">个人专属</a>
+         ❤<a href="//www.kevinfaith.cn" target="_blank">Kevin</a>
+      &copy; 2018 kevin<br>
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://www.kevinfaith.cn",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/acm编程/">acm编程</a><a class="category-link" href="/categories/linux命令/">linux命令</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/acm/" style="font-size: 15px;">acm</a> <a href="/tags/kali/" style="font-size: 10px;">kali</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>归档</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/bitcoin">
+                    <i class="fa fa-bitcoin"></i><span>挖矿</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/acm/" style="font-size: 15px;">acm</a> <a href="/tags/kali/" style="font-size: 10px;">kali</a> <a href="/tags/linux/" style="font-size: 20px;">linux</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/nvm/" style="font-size: 10px;">nvm</a> <a href="/tags/代理/" style="font-size: 10px;">代理</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  </div>
+</body>
+</html>
