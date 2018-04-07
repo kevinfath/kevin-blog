@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kevinfaith.cn/"/>
-  <updated>2018-03-24T13:51:59.281Z</updated>
+  <updated>2018-04-07T15:03:35.586Z</updated>
   <id>http://www.kevinfaith.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>beef漏洞利用框架安装.md</title>
+    <link href="http://www.kevinfaith.cn/2018/04/07/beef%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"/>
+    <id>http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/</id>
+    <published>2018-04-07T14:08:20.000Z</published>
+    <updated>2018-04-07T15:03:35.586Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！<br><a id="more"></a></p><h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><h6 id="１．先安装一些必要的工具："><a href="#１．先安装一些必要的工具：" class="headerlink" title="１．先安装一些必要的工具："></a>１．先安装一些必要的工具：</h6><pre><code>sudo apt-get install curl git nodejs</code></pre><h6 id="２．因为beef是ruby编写的，所以首先安装ruby管理工具："><a href="#２．因为beef是ruby编写的，所以首先安装ruby管理工具：" class="headerlink" title="２．因为beef是ruby编写的，所以首先安装ruby管理工具："></a>２．因为beef是ruby编写的，所以首先安装ruby管理工具：</h6><pre><code>curl -sSL https://get.rvm.io | bash -s stablesource /etc/profile.d/rvm.shrvm install 2.3.0   //安装ruby2.3.0版本rvm use 2.3.0 --default  //选择系统默认版本为2.3.0</code></pre><h6 id="３．安装beff"><a href="#３．安装beff" class="headerlink" title="３．安装beff:"></a>３．安装beff:</h6><pre><code>git clone git://github.com/beefproject/beef.gitcd beef</code></pre><h6 id="4-安装bundle"><a href="#4-安装bundle" class="headerlink" title="4.安装bundle:"></a>4.安装bundle:</h6><pre><code>gem install bundlebundle install</code></pre><h6 id="5-更新beEF"><a href="#5-更新beEF" class="headerlink" title="5.更新beEF:"></a>5.更新beEF:</h6><pre><code>./update-beef</code></pre><h6 id="6-启动beEF"><a href="#6-启动beEF" class="headerlink" title="6.启动beEF:"></a>6.启动beEF:</h6><pre><code>./beef</code></pre><h6 id="7-启动浏览器："><a href="#7-启动浏览器：" class="headerlink" title="7.启动浏览器："></a>7.启动浏览器：</h6><pre><code>http://127.0.0.1:3000/ui/panel　//进入beef后台管理页面使用默认用户名 beef 密码 beef登录</code></pre><h6 id="8-使用："><a href="#8-使用：" class="headerlink" title="8.使用："></a>8.使用：</h6><p>BeEF自带了一个hack页面</p><pre><code>http://127.0.0.1:3000/demos/basic.html </code></pre><p> 当有人点击这个页面，就可以控制他的浏览器，钓鱼，社工，随你发挥。</p><h5 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h5><p>运行curl -sSL <a href="https://get.rvm.io" target="_blank" rel="noopener">https://get.rvm.io</a> | bash -s stable 时会报公钥问题。<br>根据提示的公钥，再运行<br>gpg –keyserver hkp://keys.gnupg.net –recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3<br>成功运行后，再一次curl -sSL <a href="https://get.rvm.io" target="_blank" rel="noopener">https://get.rvm.io</a> | bash -s stable 来安装环境。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h4&gt;&lt;p&gt;BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="渗透测试" scheme="http://www.kevinfaith.cn/tags/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+      <category term="XSS" scheme="http://www.kevinfaith.cn/tags/XSS/"/>
+    
+  </entry>
   
   <entry>
     <title>介绍一款牛逼的渗透测试框架</title>

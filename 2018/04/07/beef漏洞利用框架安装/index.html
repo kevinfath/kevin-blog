@@ -5,22 +5,23 @@
 <meta name="baidu-site-verification" content="4PgRGQUa1v" />
   <meta charset="utf-8">
   
-  <title>kevin-blog</title>
+  <title>beef漏洞利用框架安装.md | kevin-blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Kevin,Kevin's Blog" />
   
-  <meta name="description" content="Loading…">
-<meta property="og:type" content="website">
-<meta property="og:title" content="kevin-blog">
-<meta property="og:url" content="http://www.kevinfaith.cn/bitcoin/index.html">
+  <meta name="description" content="简介BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！">
+<meta name="keywords" content="渗透测试,XSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="beef漏洞利用框架安装.md">
+<meta property="og:url" content="http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/index.html">
 <meta property="og:site_name" content="kevin-blog">
-<meta property="og:description" content="Loading…">
+<meta property="og:description" content="简介BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-06T09:24:33.094Z">
+<meta property="og:updated_time" content="2018-04-07T15:03:35.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kevin-blog">
-<meta name="twitter:description" content="Loading…">
+<meta name="twitter:title" content="beef漏洞利用框架安装.md">
+<meta name="twitter:description" content="简介BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！">
   
   
     <link rel="icon" href="http://ww4.sinaimg.cn/large/0060lm7Tly1fostskt41kj301s01sjrk.jpg">
@@ -116,19 +117,58 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-beef漏洞利用框架安装" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
-    <div class="article-entry " itemprop="articleBody">
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      beef漏洞利用框架安装.md
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-04-07
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p><script src="https://authedmine.com/lib/simple-ui.min.js" async></script></p>
-<div class="coinhive-miner" style="width: 256px; height: 310px" data-key="looJs3aLNmHC3uDuaQxjYzgyZP4QjcUv" data-autostart="true" data-whitelabel="false" data-background="#000000" data-text="#eeeeee" data-action="#00ff00" data-graph="#555555" data-threads="4" data-throttle="0.3"><br>    <em>Loading…</em><br></div>
+            <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！<br><a id="more"></a></p>
+<h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><h6 id="１．先安装一些必要的工具："><a href="#１．先安装一些必要的工具：" class="headerlink" title="１．先安装一些必要的工具："></a>１．先安装一些必要的工具：</h6><pre><code>sudo apt-get install curl git nodejs
+</code></pre><h6 id="２．因为beef是ruby编写的，所以首先安装ruby管理工具："><a href="#２．因为beef是ruby编写的，所以首先安装ruby管理工具：" class="headerlink" title="２．因为beef是ruby编写的，所以首先安装ruby管理工具："></a>２．因为beef是ruby编写的，所以首先安装ruby管理工具：</h6><pre><code>curl -sSL https://get.rvm.io | bash -s stable
+source /etc/profile.d/rvm.sh
+rvm install 2.3.0   //安装ruby2.3.0版本
+rvm use 2.3.0 --default  //选择系统默认版本为2.3.0
+</code></pre><h6 id="３．安装beff"><a href="#３．安装beff" class="headerlink" title="３．安装beff:"></a>３．安装beff:</h6><pre><code>git clone git://github.com/beefproject/beef.git
+cd beef
+</code></pre><h6 id="4-安装bundle"><a href="#4-安装bundle" class="headerlink" title="4.安装bundle:"></a>4.安装bundle:</h6><pre><code>gem install bundle
+bundle install
+</code></pre><h6 id="5-更新beEF"><a href="#5-更新beEF" class="headerlink" title="5.更新beEF:"></a>5.更新beEF:</h6><pre><code>./update-beef
+</code></pre><h6 id="6-启动beEF"><a href="#6-启动beEF" class="headerlink" title="6.启动beEF:"></a>6.启动beEF:</h6><pre><code>./beef
+</code></pre><h6 id="7-启动浏览器："><a href="#7-启动浏览器：" class="headerlink" title="7.启动浏览器："></a>7.启动浏览器：</h6><pre><code>http://127.0.0.1:3000/ui/panel　//进入beef后台管理页面
+使用默认用户名 beef 密码 beef登录
+</code></pre><h6 id="8-使用："><a href="#8-使用：" class="headerlink" title="8.使用："></a>8.使用：</h6><p>BeEF自带了一个hack页面</p>
+<pre><code>http://127.0.0.1:3000/demos/basic.html 
+</code></pre><p> 当有人点击这个页面，就可以控制他的浏览器，钓鱼，社工，随你发挥。</p>
+<h5 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h5><p>运行curl -sSL <a href="https://get.rvm.io" target="_blank" rel="noopener">https://get.rvm.io</a> | bash -s stable 时会报公钥问题。<br>根据提示的公钥，再运行<br>gpg –keyserver hkp://keys.gnupg.net –recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3<br>成功运行后，再一次curl -sSL <a href="https://get.rvm.io" target="_blank" rel="noopener">https://get.rvm.io</a> | bash -s stable 来安装环境。</p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年03月06日 17:24</p>
-        <p>原始链接： <a class="post-url" href="/bitcoin/index.html" title="">http://www.kevinfaith.cn/bitcoin/index.html</a></p>
+        <p>最后更新： 2018年04月07日 23:03</p>
+        <p>原始链接： <a class="post-url" href="/2018/04/07/beef漏洞利用框架安装/" title="beef漏洞利用框架安装.md">http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/</a></p>
         <footer>
             <a href="http://www.kevinfaith.cn">
                 <img src="/images/logo.png" alt="kevin">
@@ -185,7 +225,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/bitcoin/&title=kevin-blog&pic=http://www.kevinfaith.cnimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/&title=《beef漏洞利用框架安装.md》 — kevin-blog&pic=/images/banner.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -195,22 +235,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/bitcoin/&title=kevin-blog&source=blog" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/&title=《beef漏洞利用框架安装.md》 — kevin-blog&source=简介BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两..." data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/bitcoin/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=kevin-blog&url=http://www.kevinfaith.cn/bitcoin/&via=http://www.kevinfaith.cn" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《beef漏洞利用框架安装.md》 — kevin-blog&url=http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/&via=http://www.kevinfaith.cn" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/bitcoin/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -220,7 +260,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/bitcoin/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -229,6 +269,15 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/渗透测试/" class="color5">渗透测试</a>
+      
+    <a href="/tags/XSS/" class="color4">XSS</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -236,6 +285,22 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简介"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装："><span class="post-toc-text">安装：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#１．先安装一些必要的工具："><span class="post-toc-text">１．先安装一些必要的工具：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#２．因为beef是ruby编写的，所以首先安装ruby管理工具："><span class="post-toc-text">２．因为beef是ruby编写的，所以首先安装ruby管理工具：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#３．安装beff"><span class="post-toc-text">３．安装beff:</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#4-安装bundle"><span class="post-toc-text">4.安装bundle:</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#5-更新beEF"><span class="post-toc-text">5.更新beEF:</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#6-启动beEF"><span class="post-toc-text">6.启动beEF:</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#7-启动浏览器："><span class="post-toc-text">7.启动浏览器：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#8-使用："><span class="post-toc-text">8.使用：</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#补充："><span class="post-toc-text">补充：</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/24/介绍一款牛逼的社会工程学字典生成器/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">介绍一款牛逼的渗透测试框架</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -247,9 +312,9 @@
 <div class="article-footer-copyright">
 <center>本文由<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>创作和发表,采用<b>BY</b>-<b>NC</b>-<b>SA</b>国际许可协议进行许可</center>
 
-<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/bitcoin/index.html" target="_blank" title=""></a></b></center>
+<center>转载请注明作者及出处,本文作者为<b><a href="/index.html" target="_blank" title="kevin">kevin</a></b>,本文标题为<b><a href="/2018/04/07/beef漏洞利用框架安装/" target="_blank" title="beef漏洞利用框架安装.md">beef漏洞利用框架安装.md</a></b></center>
 
-<center>本文链接为<b><a href="/bitcoin/index.html" target="_blank" title="">http://www.kevinfaith.cn/bitcoin/index.html</a></b>.</center>
+<center>本文链接为<b><a href="/2018/04/07/beef漏洞利用框架安装/" target="_blank" title="beef漏洞利用框架安装.md">http://www.kevinfaith.cn/2018/04/07/beef漏洞利用框架安装/</a></b>.</center>
 </div>
 <! -- 添加版权信息 -->
 
