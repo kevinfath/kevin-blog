@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="kevin-blog">
 <meta property="og:description" content="简介  因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-10T14:29:47.456Z">
+<meta property="og:updated_time" content="2018-04-10T14:33:49.100Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学会如何让你在网络上变的相对匿名">
 <meta name="twitter:description" content="简介  因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”">
@@ -146,8 +146,8 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>  因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿<br>名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”<br><a id="more"></a><br>    形象的说：你想把一封信交给一个人（化名小明），你走到大街上，随便叫一个<br>人A，让他把这封信交给小明，A走在路上把这封信交给了B，让他交给小明，B又把这封信交给了C，然后C才把信交给了小明，这中间经过很多次的转接，就很难找寻到这封信的寄件人，这差不多就是tor的实现方式了。（这只是tor的实现方式，他的原理我就不一一叙述了，感兴趣的可以百度，google，如果你真的喜欢他，也可以为tor做点贡献，在自己的服务器上搭建一个tor的节点）<br>    但是这有个问题，tor好像只有在浏览器上的，能不能把他应用到别处<br>呢，比如在全局代理，比如linux的Terminal（终端）,因为渗透测试很多时候需要在终端下进行。</p>
-<h4 id="方法实现"><a href="#方法实现" class="headerlink" title="方法实现"></a>方法实现</h4><p>  通过一通折腾，我发现了<a href="http://www.theonionrouter.com" target="_blank" rel="noopener">ttor官网</a>提<br>供了与系统相对于的一款工具<code>Expert Bundle</code>，他只包含了tor工具，不含浏览器，tor虽然默认提供了一些公开的桥，您可以轻松启用这些功能，不幸的是，由于这些桥梁是公开分发的，因此审查员很容易阻止其中的一些桥梁，因此其中一些桥梁可能无法工作，需要自己搭建shadowsocks,用自己服务器做桥，实现shadowsocks+Tor的匿名上网，因为shadowsocks只支持socks5的流量，所以还需要用到privoxy。</p>
+            <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>  因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”<br><a id="more"></a><br>    形象的说：你想把一封信交给一个人（化名小明），你走到大街上，随便叫一个人A，让他把这封信交给小明，A走在路上把这封信<br>交给了B，让他交给小明，B又把这封信交给了C，然后C才把信交给了小明，这中间经过很多次的转接，就很难找寻到这封信的寄件人，这差不多就是tor的实现方式了。（这只是tor的实现方式，他的原理我就不一一叙述了，感兴趣的可以百度，google，如果你真的喜欢他，也可以为tor做点贡献，在自己的服务器上搭建一个tor的节点）<br>    但是这有个问题，tor好像只有在浏览器上的，能不能把他应用到别处呢，比如在全局代理，比如linux的Terminal（终端）,因<br>为渗透测试很多时候需要在终端下进行。</p>
+<h4 id="方法实现"><a href="#方法实现" class="headerlink" title="方法实现"></a>方法实现</h4><p>  通过一通折腾，我发现了<a href="http://www.theonionrouter.com" target="_blank" rel="noopener">ttor官网</a>提供了与系统相对于的一款工具<code>Expert Bundle</code><br>，他只包含了tor工具，不含浏览器，tor虽然默认提供了一些公开的桥，您可以轻松启用这些功能，不幸的是，由于这些桥梁是公开分发的，因此审查员很容易阻止其中的一些桥梁，因此其中一些桥梁可能无法工作，需要自己搭建shadowsocks,用自己服务器做桥，实现shadowsocks+Tor的匿名上网，因为shadowsocks只支持socks5的流量，所以还需要用到privoxy。</p>
 <h5 id="安装tor："><a href="#安装tor：" class="headerlink" title="安装tor："></a>安装tor：</h5><p>  在linux下，因为我用的是ubuntu，打开终端输入：</p>
 <pre><code>sudo apt install tor
 </code></pre><p>  windows因为我不熟悉，安装有兴趣的请去官方文档查看。<br>安装完毕！<br>  因为shadowsocks只支持socks5的流量，<br>所以<br>配置 <code>vi etc/tor/torrc</code><br>在最下面插入</p>
@@ -155,8 +155,8 @@
 ReachableAddresses *:80,*:443   //允许80,443端口
 ReachableAddresses reject *:*
 </code></pre><p>:wq保存，重启tor服务，<code>service tor restart</code></p>
-<h5 id="安装shadowsocks："><a href="#安装shadowsocks：" class="headerlink" title="安装shadowsocks："></a>安装shadowsocks：</h5><p>   因为一些特殊原因，搭建方法我不能说，需要匿名自行百度，关键词<br>（shadowsocks搭建教程），Shadowsocks（中文名称：影梭）是使用Python、C++、C#以及Go等语言开发、<br>基于Apache许可证的开放源代码软件，用于保护网络流量、加密数据传输以及突破中国网络审查。</p>
-<h5 id="安装privoxy："><a href="#安装privoxy：" class="headerlink" title="安装privoxy："></a>安装privoxy：</h5><p>  还是那句话因为很多应用是不支持socks5的，（比如Terminal终端）所以这里就<br>需要用到privoxy了，privoxy有将socks代理转为http代理的功能。<br>话不多说，安装：</p>
+<h5 id="安装shadowsocks："><a href="#安装shadowsocks：" class="headerlink" title="安装shadowsocks："></a>安装shadowsocks：</h5><p>   因为一些特殊原因，搭建方法我不能说，需要匿名自行百度，关键词（shadowsocks搭建教程），Shadowsocks（中文名称：影梭<br>）是使用Python、C++、C#以及Go等语言开发、基于Apache许可证的开放源代码软件，用于保护网络流量、加密数据传输以及突破中国网络审查。</p>
+<h5 id="安装privoxy："><a href="#安装privoxy：" class="headerlink" title="安装privoxy："></a>安装privoxy：</h5><p>  还是那句话因为很多应用是不支持socks5的，（比如Terminal终端）所以这里就需要用到privoxy了，privoxy有将socks代理转<br>为http代理的功能。<br>好～话不多说，安装：</p>
 <pre><code>sudo apt install privoxy
 </code></pre><p>安装完毕后，配置安装文件</p>
 <p>  因为tor监听的端口是9050，所以我们把127.0.0.1:9050的socks5的流量转换<br>成html、htmls的</p>
@@ -177,7 +177,7 @@ listen-address 0.0.0.0:8118
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年04月10日 22:29</p>
+        <p>最后更新： 2018年04月10日 22:33</p>
         <p>原始链接： <a class="post-url" href="/2018/04/10/学会如何让你在网络上变的相对匿名/" title="学会如何让你在网络上变的相对匿名">http://www.kevinfaith.cn/2018/04/10/学会如何让你在网络上变的相对匿名/</a></p>
         <footer>
             <a href="http://www.kevinfaith.cn">
