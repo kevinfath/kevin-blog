@@ -3,9 +3,31 @@
   
     
     <entry>
+      <title>学会如何让你在网络上变的相对匿名</title>
+      <link href="/2018/04/10/%E5%AD%A6%E4%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9%E4%BD%A0%E5%9C%A8%E7%BD%91%E7%BB%9C%E4%B8%8A%E5%8F%98%E7%9A%84%E7%9B%B8%E5%AF%B9%E5%8C%BF%E5%90%8D/"/>
+      <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”<br><a id="more"></a><br>   形象的说：你想把一封信交给一个人（化名小明），你走到大街上，随<br>便叫一个人A，让他把这封信交给小明，A走在路上把这封信交给了B，让他交给小明，B又把这封信交给了C，然后C才把信交给了小明，这中间经过很多次的转接，就很难找寻到这封信的寄件人，这差不多就是tor的实现方式了。（这只是tor的实现方式，他的原理我就不一一叙述了，感兴趣的可以百度，google，如果你真的喜欢他，也可以为tor做点贡献，在自己的服务器上搭建一个tor的节点）<br>    但是这有个问题，tor好像只有在浏览器上的，能不能把他应用到别处<br>呢，比如在全局代理，比如linux的Terminal（终端）,因为渗透测试很多时候需要在终端下进行。</p><h4 id="方法实现"><a href="#方法实现" class="headerlink" title="方法实现"></a>方法实现</h4><p>  通过一通折腾，我发现了<a href="http://www.theonionrouter.com" target="_blank" rel="noopener">ttor官网</a>提供了与系统相对于的一款工具<code>Expert Bundle</code>，他只包含了tor工具，不含浏览器，tor虽然默认提供了一些公开的桥，您可以轻松启用这些功能，不幸的是，由于这些桥梁是公开分发的，因此审查员很容易阻止其中的一些桥梁，因此其中一些桥梁可能无法工作，需要自己搭建shadowsocks,用自己服务器做桥，实现shadowsocks+Tor的匿名上网，因为shadowsocks只支持socks5的流量，所以还需要用到privoxy。</p><h5 id="安装tor："><a href="#安装tor：" class="headerlink" title="安装tor："></a>安装tor：</h5><p>在linux下，因为我用的是ubuntu，打开终端输入：</p><pre><code>sudo apt install tor</code></pre><p>windows因为我不熟悉，安装有兴趣的请去官方文档查看。<br>安装完毕！<br>因为shadowsocks只支持socks5的流量，<br>所以<br>配置 <code>vi etc/tor/torrc</code><br>在最下面插入</p><pre><code>SOCKS5proxy 127.0.0.1:1080    //通过socks5的代理ReachableAddresses *:80,*:443   //允许80,443端口ReachableAddresses reject *:*</code></pre><p>:wq保存，重启tor服务，<code>service tor restart</code></p><h5 id="安装shadowsocks："><a href="#安装shadowsocks：" class="headerlink" title="安装shadowsocks："></a>安装shadowsocks：</h5><p>因为一些特殊原因，搭建方法我不能说，需要匿名自行百度，关键词（shadowsocks搭建教程），Shadowsocks（中文名称：影梭）是使用Python、C++、C#以及Go等语言开发、<br>基于Apache许可证的开放源代码软件，用于保护网络流量、加密数据传输以及突破中国网络审查。</p><h5 id="安装privoxy："><a href="#安装privoxy：" class="headerlink" title="安装privoxy："></a>安装privoxy：</h5><p>还是那句话因为很多应用是不支持socks5的，（比如Terminal终端）所以这里就需要用到privoxy了，privoxy有将socks代理转为http代理的功能。<br>话不多说，安装：</p><pre><code>sudo apt install privoxy</code></pre><p>安装完毕后，配置安装文件<br>因为tor监听的端口是9050，所以我们把127.0.0.1:9050的socks5的流量转换成html、htmls的</p><pre><code>sudo vi /etc/privoxy/config</code></pre><p>在里面插入一行</p><pre><code>forward-socks5t   /   127.0.0.1:9050 .listen-address 0.0.0.0:8118</code></pre><p>后面的“.”不要忘了。<br>启动一下privoxy服务。</p><pre><code>sudo service privoxy restart</code></pre><p>这样就可以给终端设置tor匿名了。</p><pre><code>vi ~/.zshc</code></pre><p>在里面添加一句</p><pre><code>alias hp=&quot;http_proxy=127.0.0.1:8118&quot;</code></pre><p>这样只要你在需要用到匿名的时候，在命令前加一句hp，就可以实现流量相对匿名了。</p><h5 id="测试："><a href="#测试：" class="headerlink" title="测试："></a>测试：</h5><pre><code>hp curl ip.sb</code></pre><p>就会显示你当前代理以后的源ip，如果显示ip是国外的，表示你成功了。</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 梯子 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>beef漏洞利用框架安装.md</title>
       <link href="/2018/04/07/beef%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/"/>
       <content type="html"><![CDATA[<h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>BeEF是目前欧美最流行的web框架攻击平台，它的全称是 the Browser exploitation framework project.最近两年国外各种黑客的会议都有它的介绍，很多pentester对这个工具都有很高的赞美。BeEF是我见过的最好的xss利用框架，他同时能够配合metasploit进一步渗透主机，强大的有些吓人！！<br><a id="more"></a></p><h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><h6 id="１．先安装一些必要的工具："><a href="#１．先安装一些必要的工具：" class="headerlink" title="１．先安装一些必要的工具："></a>１．先安装一些必要的工具：</h6><pre><code>sudo apt-get install curl git nodejs</code></pre><h6 id="２．因为beef是ruby编写的，所以首先安装ruby管理工具："><a href="#２．因为beef是ruby编写的，所以首先安装ruby管理工具：" class="headerlink" title="２．因为beef是ruby编写的，所以首先安装ruby管理工具："></a>２．因为beef是ruby编写的，所以首先安装ruby管理工具：</h6><pre><code>curl -sSL https://get.rvm.io | bash -s stablesource /etc/profile.d/rvm.shrvm install 2.3.0   //安装ruby2.3.0版本rvm use 2.3.0 --default  //选择系统默认版本为2.3.0</code></pre><h6 id="３．安装beff"><a href="#３．安装beff" class="headerlink" title="３．安装beff:"></a>３．安装beff:</h6><pre><code>git clone git://github.com/beefproject/beef.gitcd beef</code></pre><h6 id="4-安装bundle"><a href="#4-安装bundle" class="headerlink" title="4.安装bundle:"></a>4.安装bundle:</h6><pre><code>gem install bundlebundle install</code></pre><h6 id="5-更新beEF"><a href="#5-更新beEF" class="headerlink" title="5.更新beEF:"></a>5.更新beEF:</h6><pre><code>./update-beef</code></pre><h6 id="6-启动beEF"><a href="#6-启动beEF" class="headerlink" title="6.启动beEF:"></a>6.启动beEF:</h6><pre><code>./beef</code></pre><h6 id="7-启动浏览器："><a href="#7-启动浏览器：" class="headerlink" title="7.启动浏览器："></a>7.启动浏览器：</h6><pre><code>http://127.0.0.1:3000/ui/panel　//进入beef后台管理页面使用默认用户名 beef 密码 beef登录</code></pre><h6 id="8-使用："><a href="#8-使用：" class="headerlink" title="8.使用："></a>8.使用：</h6><p>BeEF自带了一个hack页面</p><pre><code>http://127.0.0.1:3000/demos/basic.html </code></pre><p> 当有人点击这个页面，就可以控制他的浏览器，钓鱼，社工，随你发挥。</p><h5 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h5><p>运行curl -sSL <a href="https://get.rvm.io" target="_blank" rel="noopener">https://get.rvm.io</a> | bash -s stable 时会报公钥问题。<br>根据提示的公钥，再运行<br>gpg –keyserver hkp://keys.gnupg.net –recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3<br>成功运行后，再一次curl -sSL <a href="https://get.rvm.io" target="_blank" rel="noopener">https://get.rvm.io</a> | bash -s stable 来安装环境。</p>]]></content>
+      
+      <categories>
+          
+          <category> 渗透测试 </category>
+          
+      </categories>
       
       
         <tags>
