@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>acm C语言鸡兔同笼问题 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="acm">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="描述  浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的">
+<meta name="keywords" content="acm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="acm C语言鸡兔同笼问题">
+<meta property="og:url" content="http://www.kevinfaith.cn/posts/15133/index.html">
+<meta property="og:site_name" content="kevin-blog">
+<meta property="og:description" content="描述  浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-20T04:52:45.236Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="acm C语言鸡兔同笼问题">
+<meta name="twitter:description" content="描述  浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的">
+    
+        <link rel="alternate" type="application/atom+xml" title="kevin-blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">kevin</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:549817286@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/kevinfath" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">acm C语言鸡兔同笼问题</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+<article id="post-acm"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">acm C语言鸡兔同笼问题</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2017-03-03 00:00:00" datetime="2017-03-02T16:00:00.000Z"  itemprop="datePublished">2017-03-03</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/acm编程/">acm编程</a></li></ul>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>描述</p>
+<blockquote>
+<p>浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。<br>童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，并和它们玩耍。一点也不像大学生，还是一副老不正经的样子，呵呵。<br>随着鸽子和兔子数目的增多，redraiment带的那点食物已经不够它们瓜分了。为了能让自己的好朋友吃的饱饱的，redraiment决定统计一下有多少只鸽子和有多少只兔子，以便带来足够的食物。一、二、三、四、五…他开始数了。<br>现在，他已经知道有这些鸽子和兔子一共有n个头和m只脚。请你帮他写个程序计算一下一共有多少只鸽子和兔子。</p>
+</blockquote>
+<a id="more"></a>
+<p>输入</p>
+<blockquote>
+<p>输入包括多组数据。<br>每行包括2个数据：n、m(代表上面题目中提到的意思1≤n, m≤230)。<br>n、m都是整数。 </p>
+</blockquote>
+<p>输出</p>
+<blockquote>
+<p>每组数据的输出都只有一行，分别是鸽子的数量和兔子数量。<br>如果输入的测试数据不能求得结果，那肯定是redraiment这个马大哈数错了，就输出”Error”提示他。</p>
+</blockquote>
+<p>样例输入</p>
+<blockquote>
+<p>94 35<br>13</p>
+</blockquote>
+<p>样例输出</p>
+<blockquote>
+<p>12 23<br>error</p>
+</blockquote>
+<p>上代码</p>
+<pre><code>#include &lt;stdio.h&gt;
+int main()
+{
+    int m,n,x,y; 
+    scanf(&quot;%d,%d&quot;,&amp;m,&amp;n);
+    if (n&gt;=1,m&lt;=2^30 )
+    {
+        if ( m % 2 == 0 )
+        {
+            x=2*n-m/2;
+            y=m/2-n;
+            printf(&quot;%d,%d\n&quot;,x,y);
+        }
+        else
+        {
+            printf(&quot;error\n&quot;);
+        }
+    }
+    else
+    {
+        printf(&quot;error\n&quot;);
+    }
+    return 0;
+}
+</code></pre><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=5276807&auto=1&height=66"></iframe>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新：<time datetime="2018-04-20T04:52:45.236Z" itemprop="dateUpdated">2018-04-20 12:52:45</time>
+</span>
+
+
+        
+        原文链接：<a href="/posts/15133/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/15133/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://www.kevinfaith.cn'">
+            <img src="/img/avatar.jpg" alt="kevin">
+            <a>kevin</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/acm/">acm</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/15133/&title=《acm C语言鸡兔同笼问题》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/15133/&title=《acm C语言鸡兔同笼问题》 — kevin-blog&source=描述
+
+浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/15133/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《acm C语言鸡兔同笼问题》 — kevin-blog&url=http://www.kevinfaith.cn/posts/15133/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/15133/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/24809/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：ubuntu下安装node版本管理工具NVM
+        </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/22498/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：acm C语言求两个数最大值">下一篇：acm C语言求两个数最大值</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2017
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://www.kevinfaith.cn">kevinfaith.cm</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+
+        <span class="license"><a  target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/15133/&title=《acm C语言鸡兔同笼问题》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/15133/&title=《acm C语言鸡兔同笼问题》 — kevin-blog&source=描述
+
+浙江工商大学校园里绿树成荫，环境非常舒适，因此也引来一批动物朋友来此居住。童心未泯的redraiment就经常带些碎面包什么的去广场喂鸽子和兔子，..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/15133/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《acm C语言鸡兔同笼问题》 — kevin-blog&url=http://www.kevinfaith.cn/posts/15133/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/15133/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABu0lEQVR42u3aQY7DIAwF0N7/0h1ptlWZ/3HCtNJjFaUNfmwQtnk84vH8Ha/P7/75OtZzXjxwcXHH3OdyvOO2v+Zf/bFUXFzcg9xk81oHazfBZAZcXNzP566/yg8068Xj4uJ+F7dNY9aHFVxc3M/nJsnP3vv1Mm7M1XBxcQfcScH0qudD9V1cXNxxVyJvh0wSniI6Li7uEW5e8mjf57i2UIKLi3uGm4TMA8xTl2gGXFzc27h5s2TvOkUeJZLg4uIe5K5bHQmubdDuHZJwcXHPcPP0Zh5g70hUn8twcXHH3KQt2rZC9y5VFN1gXFzcI9y9wNeWSKINFBcX9wh3Uv7Ik6K9C1tv58TFxT3OvfaWVFtAiUqouLi4N3PbNmp79NkrixStFFxc3Bu47WfJMtqvLuj/4OLiXspti6RJjaLYktrrX7i4uAe5e1co2mLK3sDFxf0vbj7aw0o+z6jzg4uLeym33VD2UqB5eaVeDC4u7pg7aYe0W17bxB3tkbi4uGPupOSx96ZOfnBxcT+Se0cnJy/I4uLifgt3XgrJj0S4uLjnuZMwSVI0b8/g4uKe5F5VMG2DtQUUXFzcI9wfu+tN1Nwbt0oAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2017/10/11");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "kevin");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>

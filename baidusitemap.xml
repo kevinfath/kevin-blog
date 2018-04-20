@@ -3,9 +3,31 @@
 
 
     
+    
   <url>
-    <loc>http://www.kevinfaith.cn/2018/04/10/%E5%AD%A6%E4%BC%9A%E5%A6%82%E4%BD%95%E8%AE%A9%E4%BD%A0%E5%9C%A8%E7%BD%91%E7%BB%9C%E4%B8%8A%E5%8F%98%E7%9A%84%E7%9B%B8%E5%AF%B9%E5%8C%BF%E5%90%8D/</loc>
-    <lastmod>2018-04-10T14:33:49.100Z</lastmod>
+    <loc>http://www.kevinfaith.cn//posts/24809/</loc>
+    <lastmod>2018-04-20T04:52:45.244Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu下安装node版本管理工具NVM</title>
+        <pubTime>2018-03-04T06:50:41.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+        <tag>nvm</tag>
+         
+        <tag>nodejs</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn//posts/11406/</loc>
+    <lastmod>2018-04-20T04:52:45.244Z</lastmod>
     <data>
         <display>
         <title>学会如何让你在网络上变的相对匿名</title>
@@ -23,30 +45,8 @@
 
     
   <url>
-    <loc>http://www.kevinfaith.cn/2018/04/07/beef%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%A1%86%E6%9E%B6%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-04-07T15:12:45.122Z</lastmod>
-    <data>
-        <display>
-        <title>beef漏洞利用框架安装.md</title>
-        <pubTime>2018-04-07T14:08:20.000Z</pubTime>
-        
-        <tag>渗透测试</tag>
-         
-        <tag>XSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="渗透测试" url="http://www.kevinfaith.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.kevinfaith.cn/2018/03/24/%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AC%BE%E7%89%9B%E9%80%BC%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%B7%A5%E7%A8%8B%E5%AD%A6%E5%AD%97%E5%85%B8%E7%94%9F%E6%88%90%E5%99%A8/</loc>
-    <lastmod>2018-03-24T13:51:59.281Z</lastmod>
+    <loc>http://www.kevinfaith.cn//posts/3818/</loc>
+    <lastmod>2018-04-20T04:52:45.244Z</lastmod>
     <data>
         <display>
         <title>介绍一款牛逼的渗透测试框架</title>
@@ -64,8 +64,68 @@
 
     
   <url>
-    <loc>http://www.kevinfaith.cn/2018/03/15/linux%E7%BB%99%E7%BB%88%E7%AB%AF%E3%80%81git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/</loc>
-    <lastmod>2018-03-15T13:16:28.632Z</lastmod>
+    <loc>http://www.kevinfaith.cn//posts/22498/</loc>
+    <lastmod>2018-04-20T04:52:45.240Z</lastmod>
+    <data>
+        <display>
+        <title>acm C语言求两个数最大值</title>
+        <pubTime>2017-02-16T16:00:00.000Z</pubTime>
+        
+        <tag>acm</tag>
+         
+         
+           
+             
+              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn//posts/51489/</loc>
+    <lastmod>2018-04-20T04:52:45.240Z</lastmod>
+    <data>
+        <display>
+        <title>linux下修改文件所属用户组和文件权限的方法</title>
+        <pubTime>2017-02-14T16:00:00.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn//posts/15245/</loc>
+    <lastmod>2018-04-20T04:52:45.240Z</lastmod>
+    <data>
+        <display>
+        <title>linux下实现计划任务的方法</title>
+        <pubTime>2017-02-15T16:00:00.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.kevinfaith.cn//posts/38299/</loc>
+    <lastmod>2018-04-20T04:52:45.240Z</lastmod>
     <data>
         <display>
         <title>linux给终端、git设置代理</title>
@@ -85,72 +145,8 @@
 
     
   <url>
-    <loc>http://www.kevinfaith.cn/2018/03/04/ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85node%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7NVM/</loc>
-    <lastmod>2018-03-15T12:57:45.555Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu下安装node版本管理工具NVM</title>
-        <pubTime>2018-03-04T06:50:41.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-        <tag>nvm</tag>
-         
-        <tag>nodejs</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-    
-  <url>
-    <loc>http://www.kevinfaith.cn/2017/02/16/linux2/</loc>
-    <lastmod>2018-03-04T08:12:36.387Z</lastmod>
-    <data>
-        <display>
-        <title>linux下实现计划任务的方法</title>
-        <pubTime>2017-02-15T16:00:00.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.kevinfaith.cn/2017/02/15/linux/</loc>
-    <lastmod>2018-03-04T08:08:37.927Z</lastmod>
-    <data>
-        <display>
-        <title>linux下修改文件所属用户组和文件权限的方法</title>
-        <pubTime>2017-02-14T16:00:00.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.kevinfaith.cn/2017/03/03/acm/</loc>
-    <lastmod>2018-03-04T08:07:28.082Z</lastmod>
+    <loc>http://www.kevinfaith.cn//posts/15133/</loc>
+    <lastmod>2018-04-20T04:52:45.236Z</lastmod>
     <data>
         <display>
         <title>acm C语言鸡兔同笼问题</title>
@@ -169,24 +165,28 @@
 
     
   <url>
-    <loc>http://www.kevinfaith.cn/2017/02/17/acm2/</loc>
-    <lastmod>2018-03-04T08:07:05.014Z</lastmod>
+    <loc>http://www.kevinfaith.cn//posts/26725/</loc>
+    <lastmod>2018-04-20T04:52:45.236Z</lastmod>
     <data>
         <display>
-        <title>acm C语言求两个数最大值</title>
-        <pubTime>2017-02-16T16:00:00.000Z</pubTime>
+        <title>beef漏洞利用框架安装.md</title>
+        <pubTime>2018-04-07T14:08:20.000Z</pubTime>
         
-        <tag>acm</tag>
+        <tag>渗透测试</tag>
+         
+        <tag>XSS</tag>
          
          
            
              
-              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
+              <breadCrumb title="渗透测试" url="http://www.kevinfaith.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
           
         </display>
     </data>
     </url>
 
+    
+    
     
     
 </urlset>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>linux给终端、git设置代理 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="linux,代理,Shadowsocks">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？">
+<meta name="keywords" content="linux,代理,Shadowsocks">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux给终端、git设置代理">
+<meta property="og:url" content="http://www.kevinfaith.cn/posts/38299/index.html">
+<meta property="og:site_name" content="kevin-blog">
+<meta property="og:description" content="概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/0060lm7Tly1fpdqm9h3fbj30de0ebwf6.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/0060lm7Tly1fpdqktbykaj30940emmy2.jpg">
+<meta property="og:updated_time" content="2018-04-20T04:52:45.240Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux给终端、git设置代理">
+<meta name="twitter:description" content="概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/0060lm7Tly1fpdqm9h3fbj30de0ebwf6.jpg">
+    
+        <link rel="alternate" type="application/atom+xml" title="kevin-blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">kevin</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:549817286@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/kevinfath" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/u/6179399347" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">linux给终端、git设置代理</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#概述："><span class="post-toc-number">1.</span> <span class="post-toc-text">概述：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#准备工具："><span class="post-toc-number">2.</span> <span class="post-toc-text">准备工具：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#安装步骤："><span class="post-toc-number">3.</span> <span class="post-toc-text">安装步骤：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#安装ss-qt5："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">安装ss-qt5：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#安装polipo"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">安装polipo:</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#修改配置文件："><span class="post-toc-number">3.3.</span> <span class="post-toc-text">修改配置文件：</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#关闭和启动polip"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">关闭和启动polip:</span></a></li></ol></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#验证和使用："><span class="post-toc-number">4.</span> <span class="post-toc-text">验证和使用：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置别名"><span class="post-toc-number">5.</span> <span class="post-toc-text">设置别名</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#给git设置代理："><span class="post-toc-number">6.</span> <span class="post-toc-text">给git设置代理：</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-linux给终端、git设置代理"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">linux给终端、git设置代理</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-03-15 20:43:20" datetime="2018-03-15T12:43:20.000Z"  itemprop="datePublished">2018-03-15</time>
+
+            <br id="mybreak"/>
+            
+<script>
+	mybreak.style="display:none";
+</script>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h5 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h5><p>因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？<br><a id="more"></a></p>
+<h5 id="准备工具："><a href="#准备工具：" class="headerlink" title="准备工具："></a>准备工具：</h5><p>Shadowsocks-qt5 polipo 一台搭建有ss服务的海外服务器</p>
+<h5 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h5><h6 id="安装ss-qt5："><a href="#安装ss-qt5：" class="headerlink" title="安装ss-qt5："></a>安装ss-qt5：</h6><pre><code>$ sudo add-apt-repository ppa:hzwhuang/ss-qt5 
+$ sudo apt-get update
+$ sudo apt-get install shadowsocks-qt5
+</code></pre><p>安装完成，打开软件<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww1.sinaimg.cn/large/0060lm7Tly1fpdqm9h3fbj30de0ebwf6.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure><br>点击连接-&gt;添加-&gt;手动，输入服务器地址，端口，本地映射地址，本地端口，加密协议,保存，连接，就ojbk了。（怎么搭建Shadowsocks的教程请自行搜索，因为各种原因我就不一一陈诉了）这是我的配置截图：<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://ww2.sinaimg.cn/large/0060lm7Tly1fpdqktbykaj30940emmy2.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure> </p>
+<h6 id="安装polipo"><a href="#安装polipo" class="headerlink" title="安装polipo:"></a>安装polipo:</h6><p>命令很简单</p>
+<pre><code>$ sudo apt-get install polipo
+</code></pre><h6 id="修改配置文件："><a href="#修改配置文件：" class="headerlink" title="修改配置文件："></a>修改配置文件：</h6><pre><code>$ vi etc/polipo/config
+</code></pre><p>原文件中已经有了两句话，那么需要新加入3句话：</p>
+<pre><code>socksParentProxy = &quot;127.0.0.1:1080&quot;  //这里对应着上面配置文件的本地地址和本地端口
+socksProxyType = socks5   //这里对应上面的本地服务器类型
+logLevel=4
+</code></pre><p>:wq 保存退出</p>
+<h6 id="关闭和启动polip"><a href="#关闭和启动polip" class="headerlink" title="关闭和启动polip:"></a>关闭和启动polip:</h6><pre><code>$ sudo service polipo stop
+$ sudo service polipo start
+</code></pre><h5 id="验证和使用："><a href="#验证和使用：" class="headerlink" title="验证和使用："></a>验证和使用：</h5><pre><code>$ curl ip.gs //查询你的IP地址和地理信息
+$ http_proxy=http://localhost:8123 curl ip.gs //使用代理以后的ip地址和地理信息，如果发现ip和地理信息已经改变了，表示成功
+</code></pre><p>以后终端使用代理前面都要加上http_proxy=<a href="http://localhost:8123" target="_blank" rel="noopener">http://localhost:8123</a> 是不是很麻烦。别着急</p>
+<h5 id="设置别名"><a href="#设置别名" class="headerlink" title="设置别名"></a>设置别名</h5><p>每一次都输入这么一串命令实在太不人性化，解决方法就是给这个命令一个缩写的别名，比如“hp”。</p>
+<pre><code>vi ～/.bashrc
+</code></pre><p>因为我用的是zsh,所以我的命令是<code>vi ~/.zshrc</code><br>在文档最后面加上</p>
+<pre><code>alias hp=&quot;http_proxy=http://localhost:8123&quot; 
+</code></pre><p>:wq 保存退出<br>执行<code>$ source ~/.zshrc</code><br>这样就不需要输入一长串代码了，需要用到代理的时候前面加个hp就好，<br>实验一下</p>
+<pre><code>$ hp curl ip.gs
+
+
+Current IP / 当前 IP: 45.77.253.103
+ISP / 运营商:  choopa.com
+City / 城市:  Singapore
+Country / 国家: Singapore
+</code></pre><h5 id="给git设置代理："><a href="#给git设置代理：" class="headerlink" title="给git设置代理："></a>给git设置代理：</h5><p>上面的配置对git是没有用的，需要另行配置<br>在终端下执行：</p>
+<pre><code>$ git config --global http.proxy http://127.0.0.1:8123
+</code></pre><p>但是这种方法在关机以后就不起效果了，需要重新输入一遍，<br>如果嫌麻烦，可以修改</p>
+<pre><code>$ vi ~/.gitconfig
+</code></pre><p>在[http]一行下面加入<code>proxy = http://127.0.0.1:8123</code>就可以一直奇效了</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=544566796&auto=1&height=66"></iframe>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新：<time datetime="2018-04-20T04:52:45.240Z" itemprop="dateUpdated">2018-04-20 12:52:45</time>
+</span>
+
+
+        
+        原文链接：<a href="/posts/38299/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/38299/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://www.kevinfaith.cn'">
+            <img src="/img/avatar.jpg" alt="kevin">
+            <a>kevin</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代理/">代理</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/38299/&title=《linux给终端、git设置代理》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/38299/&title=《linux给终端、git设置代理》 — kevin-blog&source=概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/38299/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《linux给终端、git设置代理》 — kevin-blog&url=http://www.kevinfaith.cn/posts/38299/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/38299/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/3818/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：介绍一款牛逼的渗透测试框架
+        </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/24809/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：ubuntu下安装node版本管理工具NVM">下一篇：ubuntu下安装node版本管理工具NVM</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2017
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://www.kevinfaith.cn">kevinfaith.cm</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+
+        <span class="license"><a  target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.png">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/38299/&title=《linux给终端、git设置代理》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/38299/&title=《linux给终端、git设置代理》 — kevin-blog&source=概述：因为我大中国的国情～（咳咳，你们懂得），很多时候给我们造成很多不便，一些软件的下载，需要挂代理才能完成，而在linux下，怎么给我们的终端设置代理呢？" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/38299/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《linux给终端、git设置代理》 — kevin-blog&url=http://www.kevinfaith.cn/posts/38299/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/38299/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABvUlEQVR42u3aQY7CMAwFUO5/aWbLiKH9tpvQkV5WFQ3J68ZyHD8e8Xi+jNdfPj2/j09rPlYMXFzcMfd5OJI5+ca99XFxcb/FPQ4073OSpZO3uQEXF/fO3Ak9SZhwcXH/L/f4X/kcXFzcO3OTw8/xkaZXzVh4VsPFxR1w83LGuucl9V1cXNwW91kck2uV3o6/VsDFxd3CvSpBqQapPH3BxcXdz60uWi2I9HKuZgjDxcW9iNvbpprQXNXkgYuLu4eb46ppzbXNXri4uN/lJrhCCSNOmJIdcXFx93CPL0qr20/KKOXyCi4u7mJudaFJYXSSBuHi4u7hJslN8nwchiYl1z8OP7i4uIu5823yDSYFEVxc3P3cqFg5Lo/mLaEnv+Pi4m7k5iWSqwqmzdIMLi7uRm5+FZqnOL3PO0mYcHFxN3InzZRXBbLIg4uLu5jbCze9cknvI3Fxcfdz89E78OQBax7+cHFxr+VWg1dyUJlcw5y8xcXF3cjNA03etJE3XuStXbi4uHfmJqGt2lqRhE5cXNw7c6Nrj3hOoYSKi4u7kVsNOr32rOTDTmbi4uJu4ZZDSTHpmWw/qu/i4uJ2uD8BEfdGBPMABgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2017/10/11");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "kevin");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>
