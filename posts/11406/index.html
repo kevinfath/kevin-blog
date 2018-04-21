@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="kevin-blog">
 <meta property="og:description" content="简介   因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-20T04:52:45.244Z">
+<meta property="og:updated_time" content="2018-04-21T05:02:48.874Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学会如何让你在网络上变的相对匿名">
 <meta name="twitter:description" content="简介   因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”">
@@ -227,7 +227,7 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>   因为最近在弄渗透测试，就担心那天被查水表了，就想起怎么让自己的变的相对匿名呢，这时我想到了tor，“Tor（The Onion Router）是第二代洋葱路由（onion routing）的一种实现，用户通过Tor可以在因特网上进行匿名交流。Tor专门防范流量过滤、嗅探分析。”<br><a id="more"></a><br>    形象的说：你想把一封信交给一个人（化名小明），你走到大街上，随便叫一个人A，让他把这封信交给小明，A走在路上把这封信交给了B，让他交给小明，B又把这封信交给了C，然后C才把信交给了小明，这中间经过很多次的转接，就很难找寻到这封信的寄件人，这差不多就是tor的实现方式了。（这只是tor的实现方式，他的原理我就不一一叙述了，感兴趣的可以google，百度，如果你真的喜欢他，也可以为tor做点贡献，在自己的服务器上搭建一个tor的节点）<br>    但是这有个问题，tor好像只有在浏览器上的，能不能把他应用到别处呢，比如在全局代理，比如linux的Terminal（终端）,因为渗透测试很多时候需要在终端下进行。</p>
-<h4 id="方法实现"><a href="#方法实现" class="headerlink" title="方法实现"></a>方法实现</h4><p>   通过一通折腾，我发现了<a href="http://www.theonionrouter.com" target="_blank" rel="noopener">ttor官网</a>提供了与系统相对于的一款工具<code>Expert Bundle</code>，他只包含了tor工具，不含浏览器，tor虽然默认提供了一些公开的桥，您可以轻松启用这些功能，不幸的是，由于这些桥梁是公开分发的，因此审查员很容易阻止其中的一些桥梁，因此其中一些桥梁可能无法工作，需要自己搭建shadowsocks,用自己服务器做桥，实现shadowsocks+Tor的匿名上网，因为shadowsocks只支持socks5的流量，所以还需要用到privoxy。</p>
+<h4 id="方法实现"><a href="#方法实现" class="headerlink" title="方法实现"></a>方法实现</h4><p>   通过一通折腾，我发现了<a href="http://www.theonionrouter.com" target="_blank" rel="noopener">tor官网</a>提供了与系统相对于的一款工具<code>Expert Bundle</code>，他只包含了tor工具，不含浏览器，tor虽然默认提供了一些公开的桥，您可以轻松启用这些功能，不幸的是，由于这些桥梁是公开分发的，因此审查员很容易阻止其中的一些桥梁，因此其中一些桥梁可能无法工作，需要自己搭建shadowsocks,用自己服务器做桥，实现shadowsocks+Tor的匿名上网，因为shadowsocks只支持socks5的流量，所以还需要用到privoxy。</p>
 <h5 id="安装tor："><a href="#安装tor：" class="headerlink" title="安装tor："></a>安装tor：</h5><p>  在linux下，因为我用的是ubuntu，打开终端输入：</p>
 <pre><code>sudo apt install tor
 </code></pre><p>  windows因为我不熟悉，安装有兴趣的请去官方文档查看。<br>安装完毕！<br>  因为shadowsocks只支持socks5的流量，<br>所以<br>配置 <code>vi etc/tor/torrc</code><br>在最下面插入</p>
@@ -261,7 +261,7 @@ listen-address 0.0.0.0:8118
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2018-04-20T04:52:45.244Z" itemprop="dateUpdated">2018-04-20 12:52:45</time>
+    最后更新：<time datetime="2018-04-21T05:02:48.874Z" itemprop="dateUpdated">2018-04-21 13:02:48</time>
 </span>
 
 
@@ -343,7 +343,15 @@ listen-address 0.0.0.0:8118
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/posts/89374c81/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：区块链
+        </h4>
+      </a>
+    </div>
   
 
   

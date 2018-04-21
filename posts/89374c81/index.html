@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>区块链 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="区块链,以太坊">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="简介：最近小米出了一个“区块链产品”：wifi链，现在还是内侧版，我也下了个玩玩，比特币的时候没有做第一批吃螃蟹的，现在面前就有个机会，当然要体验一把。这篇博客会说下什么是区块链。">
+<meta name="keywords" content="区块链,以太坊">
+<meta property="og:type" content="article">
+<meta property="og:title" content="区块链">
+<meta property="og:url" content="http://www.kevinfaith.cn/posts/89374c81/index.html">
+<meta property="og:site_name" content="kevin-blog">
+<meta property="og:description" content="简介：最近小米出了一个“区块链产品”：wifi链，现在还是内侧版，我也下了个玩玩，比特币的时候没有做第一批吃螃蟹的，现在面前就有个机会，当然要体验一把。这篇博客会说下什么是区块链。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-21T06:18:58.806Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="区块链">
+<meta name="twitter:description" content="简介：最近小米出了一个“区块链产品”：wifi链，现在还是内侧版，我也下了个玩玩，比特币的时候没有做第一批吃螃蟹的，现在面前就有个机会，当然要体验一把。这篇博客会说下什么是区块链。">
+    
+        <link rel="alternate" type="application/atom+xml" title="kevin-blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">kevin</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:549817286@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/kevinfath" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+              <a class="nav2item" data-title="微博" href="https://weibo.com/6412763822" target="_blank"title="微博" >
+                <i class="icon icon-lg icon-weibo weibo"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">区块链</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#简介："><span class="post-toc-number">1.</span> <span class="post-toc-text">简介：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#什么是区块链："><span class="post-toc-number">2.</span> <span class="post-toc-text">什么是区块链：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-理解："><span class="post-toc-number">3.</span> <span class="post-toc-text">1.理解：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-起源"><span class="post-toc-number">4.</span> <span class="post-toc-text">2.起源</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#区块"><span class="post-toc-number">5.</span> <span class="post-toc-text">区块</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#矿工的任务："><span class="post-toc-number">6.</span> <span class="post-toc-text">矿工的任务：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#难度系数的动态调节："><span class="post-toc-number">7.</span> <span class="post-toc-text">难度系数的动态调节：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#确认区块有效性"><span class="post-toc-number">8.</span> <span class="post-toc-text">确认区块有效性</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#区块链的分叉"><span class="post-toc-number">9.</span> <span class="post-toc-text">区块链的分叉</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#最后"><span class="post-toc-number">10.</span> <span class="post-toc-text">最后</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-区块链"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">区块链</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-04-21 11:44:39" datetime="2018-04-21T03:44:39.000Z"  itemprop="datePublished">2018-04-21</time>
+
+            <br id="mybreak"/>
+            
+<script>
+	mybreak.style="display:none";
+</script>
+
+
+            <i>·</i>
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>次浏览
+</span>
+
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">7</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h5 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h5><p>最近小米出了一个“区块链产品”：wifi链，现在还是内侧版，我也下了个玩玩，比特币的时候没有做第一批吃螃蟹的，现在面前就有个机会，当然要体验一把。这篇博客会说下什么是区块链。<br><a id="more"></a></p>
+<h5 id="什么是区块链："><a href="#什么是区块链：" class="headerlink" title="什么是区块链："></a>什么是区块链：</h5><p>按照wiki是这么描述的：<br>区块链（Blockchain）是分布式数据库识别、传播和记载信息的智能话对等网络，也称为价值互联网，中本聪在2008年，于《比特币白皮书》中提出了“区块链”概念，本在2009年创立了比特币社会网络，开发了第一个区块，即“创世区块”。</p>
+<p>简单的来说，区块链的本质就是一种特殊的分布式数据库，既然是数据库，当然是用来储存信息的，其次既然是分布式的，所以任何人都可以假设服务器，加入区块链网络，成为其中的一个节点，既然是去中心化，所以没有任何的管理員，每一个节点都是平等的。</p>
+<h5 id="1-理解："><a href="#1-理解：" class="headerlink" title="1.理解："></a>1.理解：</h5><p>简单的理解来说就是区块链具有：1.数据的安全性和交易的可追述性，区块链技术能使得交易数据完全公开透明，并可以提供完整的信息流。2.区块链的数据具有无法篡改的特性.</p>
+<h5 id="2-起源"><a href="#2-起源" class="headerlink" title="2.起源"></a>2.起源</h5><p>区块链起源于比特币，是比特币网络参与者们集体维护的一个总账本。但创新者们已经开始用区块链技术开发远超比特币自身的众多应用。从这个意义讲，我们又可以认为比特币是区块链技术的第一个应用。</p>
+<h5 id="区块"><a href="#区块" class="headerlink" title="区块"></a>区块</h5><p>区块链由一个个区块（block）组成。区块很像数据库的记录，每次写入数据，就是创建一个区块。<br>每一个区块包含了一个区块头，一个区块尾。</p>
+<pre><code>区块头（Head）：记录当前区块的特征值
+区块体（Body）：实际数据
+</code></pre><p>区块头里包含了：生成时间，实际数据（即区块体）的哈希，上一个区块的哈希，每一个区块的哈希都是不同的，简单来说就是区块头里是各种信息的加密哈希。而且哈希近乎不会被破解，<br>而且区块与哈希是一一对应的，每个区块的哈希都是针对”区块头”（Head）计算的。也就是说，把区块头的各项特征值，按照顺序连接在一起，组成一个很长的字符串，再对这个字符串计算哈希。而且区块里面的任何内容只要变了，（包括上一个区块的内容）哈希都会被改的面目全非。这就是区块的唯一性，因为没有人知道上一个区块的内容，而且区块的数据一旦写入，就无法篡改。前面说过每一个区块都连着上一个区块，所以这就是区块链名字的由来。<br>可以这样简单的理解区块，就是每一次的交易的信息。</p>
+<h5 id="矿工的任务："><a href="#矿工的任务：" class="headerlink" title="矿工的任务："></a>矿工的任务：</h5><p>矿工要做的就是计算每一个区块头的哈希，前面说过，每一个区块头都包含了上一个区块的哈希，把区块头的各项特征值，按照顺序连接在一起，组成一个很长的字符串，再对这个字符串计算哈希，这就是矿工的任务了，可能有人会问矿工是怎么得到上一个区块的内容的呢，这是因为中本聪规定，任何的交易都会把区块内容分发到所有的矿工手里，然后矿工进行计算，读到这里，你可能会有一个疑问，人们都说采矿很难，可是采矿不就是用计算机算出一个哈希吗，这正是计算机的强项啊，怎么会变得很难，迟迟算不出来呢？那你就大错特错了，中本聪有个变态的规定：原来不是任意一个哈希都可以，只有满足条件的哈希才会被区块链接受。这个条件特别苛刻，使得绝大部分哈希都不满足要求，必须重算。</p>
+<p>前面说过当前区块的哈希由区块头唯一决定。如果要对同一个区块反复计算哈希，就意味着，区块头必须不停地变化，否则不可能算出不一样的哈希。区块头里面所有的特征值都是固定的，为了让区块头产生变化，中本聪故意增加了一个随机项，叫做 Nonce。其实这个不如叫做幸运数，只有你足够幸运，在一次次失败中，反复修改幸运值，重复这个过程直到生成一串有效的编号。这就是采矿如此之慢的根本原因，运气好的话，也许一会就找到了 Nonce。运气不好的话，可能算完了21.47亿次，都没有发现 Nonce，即当前区块体不可能算出满足条件的哈希。这时，协议允许矿工改变区块体，开始新的计算。这就奇怪了，这些矿工为什么要拼命干这看似无意义的事情呢？其实矿工是有报酬的，只要你生成一张满足条件的区块，你就会获得比特币的报酬。</p>
+<h5 id="难度系数的动态调节："><a href="#难度系数的动态调节：" class="headerlink" title="难度系数的动态调节："></a>难度系数的动态调节：</h5><p>正如上一节所说，采矿具有随机性，没法保证正好十分钟产出一个区块，有时一分钟就算出来了，有时几个小时可能也没结果。总体来看，随着硬件设备的提升，以及矿机的数量增长，计算速度一定会越来越快。</p>
+<p>为了将产出速率恒定在十分钟，中本聪还设计了难度系数的动态调节机制。他规定，难度系数每两周（2016个区块）调整一次。如果这两周里面，区块的平均生成速度是9分钟，就意味着比法定速度快了10%，因此接下来的难度系数就要调高10%；如果平均生成速度是11分钟，就意味着比法定速度慢了10%，因此接下来的难度系数就要调低10%。<br>难度系数越调越高，导致了采矿越来越难。</p>
+<h5 id="确认区块有效性"><a href="#确认区块有效性" class="headerlink" title="确认区块有效性"></a>确认区块有效性</h5><p>当某挖矿小组幸运的生成了一张有意义的账簿，为了得到奖励，必须立刻请其它小组确认自己的工作。前面说过，当前村里有7个挖矿组，所以这个小组必须将有效的区块信息发到所以的挖矿小组手中，确认区块有效性，这个确认非常简单，因为区块头中包含了上一块的哈希，只要这个区块中有上一块的区块，和区块信息，就确认成功。负责不予确认。</p>
+<h5 id="区块链的分叉"><a href="#区块链的分叉" class="headerlink" title="区块链的分叉"></a>区块链的分叉</h5><p>即使区块链是可靠的，现在还有一个问题没有解决：如果两个人同时向区块链写入数据，也就是说，同时有两个区块加入，因为它们都连着前一个区块，就形成了分叉。这时应该采纳哪一个区块呢？<br>现在的规则是，新节点总是采用最长的那条区块链。如果区块链有分叉，将看哪个分支在分叉点后面，先达到6个新区块（称为”六次确认”）。按照10分钟一个区块计算，一小时就可以确认。由于新区块的生成速度由计算能力决定，所以这条规则就是说，拥有大多数计算能力的那条分支，就是正宗的区块链。<br>这一章的内容比较繁琐，涉及到哈希，区块等等知识，有兴趣的可以去<a href="http://www.ruanyifeng.com/blog/2017/12/blockchain-tutorial.html" target="_blank" rel="noopener">阮一峰老师的博客</a>看一下，<br>还有一个叫做<a href="http://blog.jobbole.com/53433/" target="_blank" rel="noopener">伯乐在线</a>的，我的这篇文章也是参考他们的博客写的。</p>
+<h5 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h5><p>如果有写的不对的地方可以联系我修改</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新：<time datetime="2018-04-21T06:18:58.806Z" itemprop="dateUpdated">2018-04-21 14:18:58</time>
+</span>
+
+
+        
+        原文链接：<a href="/posts/89374c81/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/89374c81/</a>
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://www.kevinfaith.cn'">
+            <img src="/img/avatar.jpg" alt="kevin">
+            <a>kevin</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+    <div class="page-reward">
+        <nav class="myreward">
+            <a id="rewardBtn" href="javascript:;"><span>打&nbsp;赏</span><span>装成好像很多人打赏的样子</span></a>
+        </nav>
+    </div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/以太坊/">以太坊</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/89374c81/&title=《区块链》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/89374c81/&title=《区块链》 — kevin-blog&source=简介：最近小米出了一个“区块链产品”：wifi链，现在还是内侧版，我也下了个玩玩，比特币的时候没有做第一批吃螃蟹的，现在面前就有个机会，当然要体验一把。这..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/89374c81/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《区块链》 — kevin-blog&url=http://www.kevinfaith.cn/posts/89374c81/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/89374c81/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/11406/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：学会如何让你在网络上变的相对匿名">下一篇：学会如何让你在网络上变的相对匿名</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2017
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://www.kevinfaith.cn">kevinfaith.cm</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+	<i class="icon icon-lg icon-user">
+<span id="busuanzi_container_site_uv" style='display:none'>
+       访问用户：<span id="busuanzi_value_site_uv"></span>
+    </span>人</i>
+    ·
+    <i class="icon icon-lg icon-eye">
+    <span id="busuanzi_container_site_pv" style='display:none'>
+      访问次数：<span id="busuanzi_value_site_pv"></span>
+    </span>次
+    </i>
+
+
+        </span>
+        <br/>
+
+        <span class="license"><a  target="_blank" rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">博客内容遵循 知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        <span>感谢您的鼓励支持！</span>
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" data-img="/img/dog.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="http://wx4.sinaimg.cn/mw690/0060lm7Tly1fqj8qobmovj305l05lmxi.jpg" data-alipay="http://wx3.sinaimg.cn/mw690/0060lm7Tly1fqj8r7kbq1j305k05h0t5.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechatPay">&nbsp;&nbsp;微信&nbsp;&nbsp;</span>
+                <span class="reward-toggle-item alipayPay">支付宝</span>
+            </div>
+        </label>
+        
+        <i class="icon icon-caret-up"></i>
+    </div>
+</div>
+
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/89374c81/&title=《区块链》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/89374c81/&title=《区块链》 — kevin-blog&source=简介：最近小米出了一个“区块链产品”：wifi链，现在还是内侧版，我也下了个玩玩，比特币的时候没有做第一批吃螃蟹的，现在面前就有个机会，当然要体验一把。这..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/89374c81/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《区块链》 — kevin-blog&url=http://www.kevinfaith.cn/posts/89374c81/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/89374c81/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p class="wechatshare">扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3aQQ7DIAxE0dz/0lTqqlKCO2ODk0ifVZUW8ujCMjbHIY/xHecnv8/Haczmxs8XDLhw4Za5IxznpWfE+prx7+HChdvPjQONsZwc1JLBDi5cuA/jKoHM3TxcuHDfzs1tLE6D4MKF+2SuclCpFEfcWQvOanDhwi1w3YLpjs8b67tw4cI1ucMcbrulErwu3g4XLtwWbtxA1cug8evdb/9sHi5cuI1cN8QoLZNczmWc1eDChbuZ64YwPQzF6yshbJriwIULt52rpzKVQ5G+Dbhw4fZwc6lM/eCkBMeLWXDhwr2VWw9D7vNSNxguXLgbuLlrUsrhR0+GpAIKXLhw27m5pMQ9wOgXti7+Grhw4TZy9aDjbkCPP1IJFS5cuI1cPd1xW62VVu7FluDChdvCzYFyQSp3BJo2VODChbuN6y5RuVSRK5XChQv3Lq5esDjMkZv1J5DBhQu3hasPfWn3SofRSoELF+5mbi4k6RQ93XG/hQsX7m5u/fVukbRUfoULF24j1w1euQ0vSGXgwoX7MK4b1FZd1YILF+7buW76YidPcOHCbeRWFnKLpG4pJFkWgQsXboGbK5gqrZTc4QouXLi3cj9jgyULfzydJwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2017/10/11");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "kevin");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+</body>
+</html>
