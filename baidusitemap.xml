@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://www.kevinfaith.cn//posts/cf2eaaff/</loc>
-    <lastmod>2018-04-25T13:08:30.053Z</lastmod>
+    <lastmod>2018-04-25T13:36:29.999Z</lastmod>
     <data>
         <display>
         <title>致我深爱的人</title>
@@ -126,19 +126,19 @@
 
     
   <url>
-    <loc>http://www.kevinfaith.cn//posts/22498/</loc>
+    <loc>http://www.kevinfaith.cn//posts/51489/</loc>
     <lastmod>2018-04-20T04:52:45.240Z</lastmod>
     <data>
         <display>
-        <title>acm C语言求两个数最大值</title>
-        <pubTime>2017-02-16T16:00:00.000Z</pubTime>
+        <title>linux下修改文件所属用户组和文件权限的方法</title>
+        <pubTime>2017-02-14T16:00:00.000Z</pubTime>
         
-        <tag>acm</tag>
+        <tag>linux</tag>
          
          
            
              
-              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
+              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
           
         </display>
     </data>
@@ -187,19 +187,19 @@
 
     
   <url>
-    <loc>http://www.kevinfaith.cn//posts/51489/</loc>
+    <loc>http://www.kevinfaith.cn//posts/22498/</loc>
     <lastmod>2018-04-20T04:52:45.240Z</lastmod>
     <data>
         <display>
-        <title>linux下修改文件所属用户组和文件权限的方法</title>
-        <pubTime>2017-02-14T16:00:00.000Z</pubTime>
+        <title>acm C语言求两个数最大值</title>
+        <pubTime>2017-02-16T16:00:00.000Z</pubTime>
         
-        <tag>linux</tag>
+        <tag>acm</tag>
          
          
            
              
-              <breadCrumb title="linux命令" url="http://www.kevinfaith.cn/categories/linux%E5%91%BD%E4%BB%A4/"/>
+              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
           
         </display>
     </data>
