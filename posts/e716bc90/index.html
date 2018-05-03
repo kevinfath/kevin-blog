@@ -48,7 +48,7 @@
 <meta property="og:description" content="简介：安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg">
-<meta property="og:updated_time" content="2018-05-03T03:37:02.687Z">
+<meta property="og:updated_time" content="2018-05-03T04:18:35.825Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="介绍一个安卓远控木马">
 <meta name="twitter:description" content="简介：安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马">
@@ -194,7 +194,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简介："><span class="post-toc-number">1.</span> <span class="post-toc-text">简介：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#工具："><span class="post-toc-number">2.</span> <span class="post-toc-text">工具：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装："><span class="post-toc-number">3.</span> <span class="post-toc-text">安装：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式一："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">方式一：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式二："><span class="post-toc-number">3.2.</span> <span class="post-toc-text">方式二：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#软件截图"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">软件截图</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最后："><span class="post-toc-number">4.</span> <span class="post-toc-text">最后：</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简介："><span class="post-toc-number">1.</span> <span class="post-toc-text">简介：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#工具："><span class="post-toc-number">2.</span> <span class="post-toc-text">工具：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装："><span class="post-toc-number">3.</span> <span class="post-toc-text">安装：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式一："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">方式一：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式二："><span class="post-toc-number">3.2.</span> <span class="post-toc-text">方式二：</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#软件截图"><span class="post-toc-number">4.</span> <span class="post-toc-text">软件截图</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用方式"><span class="post-toc-number">5.</span> <span class="post-toc-text">使用方式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#危害"><span class="post-toc-number">6.</span> <span class="post-toc-text">危害</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#防御方式："><span class="post-toc-number">7.</span> <span class="post-toc-text">防御方式：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最后："><span class="post-toc-number">8.</span> <span class="post-toc-text">最后：</span></a></li></ol>
         </nav>
     </aside>
    
@@ -244,13 +244,16 @@ npm start
 <p>下载AhMyth_linux64.deb</p>
 <pre><code>sudo dpkg -i AhMyth_linux64.deb
 sudo /usr/local/bin/ahmyth
-</code></pre><h5 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h5><figure class="image-bubble">
+</code></pre><h4 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h4><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
+<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><p>点击APK Builder,输入源IP，端口，然后Build,生成就好了，程序还可以支持绑定app,选择Bind With Another Apk，添加正常的apk包，Build就好。<br>ps:如果你要测试局域网之外的客户端，需要有公网地址。</p>
+<h4 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h4><p>这个木马可以在免root的情况下不知不觉的远程打开受感染目标手机的摄像头，查看短信，录制麦克风，定位地址等一系列操作。</p>
+<h4 id="防御方式："><a href="#防御方式：" class="headerlink" title="防御方式："></a>防御方式：</h4><p>不管什么木马，都需要你点击运行，才会起效，所以不要下载第三方应用，切记切记。特别是各位女孩子！！</p>
 <h4 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h4><p>本博客只是出于教育目的，对于因使用此工具而造成的任何直接或间接损失，我概不负责。</p>
 
         </div>
@@ -259,7 +262,7 @@ sudo /usr/local/bin/ahmyth
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2018-05-03T03:37:02.687Z" itemprop="dateUpdated">2018-05-03 11:37:02</time>
+    最后更新：<time datetime="2018-05-03T04:18:35.825Z" itemprop="dateUpdated">2018-05-03 12:18:35</time>
 </span>
 
 
