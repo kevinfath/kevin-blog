@@ -5,14 +5,14 @@
     <entry>
       <title>介绍一个安卓远控木马</title>
       <link href="//posts/e716bc90/"/>
-      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>#####</p><h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p>安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马</p><p>&lt;!-- more –&gt;</p><h4 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h4><p>java的运行环境</p><p>AhMyth Android RAT应用程序</p><h5 id="系统-ubuntu18-04"><a href="#系统-ubuntu18-04" class="headerlink" title="系统:ubuntu18.04"></a>系统:ubuntu18.04</h5><h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><p>源代码编译：</p><pre><code>git clone https://github.com/AhMyth/AhMyth-Android-RAT.gitcd AhMyth-Android-RAT/AhMyth-Servernpm installnpm start</code></pre><p>因为要用到java的环境，所以最好<code>sudo npm start</code></p><h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>二进制文件安装：</p><p>从<a href="https://github.com/AhMyth/AhMyth-Android-RAT/releases" target="_blank" rel="noopener">https://github.com/AhMyth/AhMyth-Android-RAT/releases</a>下载二进制文件</p><p>下载AhMyth_linux64.deb</p><pre><code>sudo dpkg -i AhMyth_linux64.debsudo /usr/local/bin/ahmyth</code></pre><h5 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h5><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h4 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h4><p>本博客只是出于教育目的，对于因使用此工具而造成的任何直接或间接损失，我概不负责。</p>]]></content>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p>安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马</p><a id="more"></a><h4 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h4><p>java的运行环境</p><p>AhMyth Android RAT应用程序</p><p>我的系统:ubuntu18.04</p><h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><h5 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h5><p>源代码编译：</p><pre><code>git clone https://github.com/AhMyth/AhMyth-Android-RAT.gitcd AhMyth-Android-RAT/AhMyth-Servernpm installnpm start</code></pre><p>因为要用到java的环境，所以最好<code>sudo npm start</code></p><h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>二进制文件安装：</p><p>从<a href="https://github.com/AhMyth/AhMyth-Android-RAT/releases" target="_blank" rel="noopener">https://github.com/AhMyth/AhMyth-Android-RAT/releases</a>下载二进制文件</p><p>下载AhMyth_linux64.deb</p><pre><code>sudo dpkg -i AhMyth_linux64.debsudo /usr/local/bin/ahmyth</code></pre><h5 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h5><figure class="image-bubble">                <div class="img-lightbox">                    <div class="overlay"></div>                    <img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg" alt="" title="">                </div>                <div class="image-caption"></div>            </figure><h4 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h4><p>本博客只是出于教育目的，对于因使用此工具而造成的任何直接或间接损失，我概不负责。</p>]]></content>
       
       
         <tags>
             
             <tag> 木马 </tag>
             
-            <tag> [object Object] </tag>
+            <tag> Android RAT </tag>
             
         </tags>
       
@@ -26,7 +26,7 @@
       
         <tags>
             
-            <tag> [object Object] </tag>
+            <tag> linux </tag>
             
         </tags>
       
