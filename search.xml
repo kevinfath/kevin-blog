@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title>解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</title>
+      <link href="//posts/8987dd48/"/>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="问题１："><a href="#问题１：" class="headerlink" title="问题１："></a>问题１：</h4><p>今天在添加java的环境变量的时候，我在<code>/etc/profile</code>添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，<code>java -version</code>以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。<code>java -version</code>提示没有此命令，懵~</p> <a id="more"></a><h4 id="推测问题原因"><a href="#推测问题原因" class="headerlink" title="推测问题原因:"></a><strong>推测问题原因:</strong></h4><p>由于在终端中source /etc/profile只是让本shell进程执行，相当于只是在本shell执行了环境变量，所以重启之后依旧失效</p><h4 id="推测解决方法"><a href="#推测解决方法" class="headerlink" title="推测解决方法:"></a>推测解决方法:</h4><p>在<code>~/.zshrc</code>中添加<code>source /etc/profile</code></p><p>重启shell</p><p>输入<code>java -version</code></p><p>完美解决!</p><p>通过百度发现:zsh其实并不使用/etc/profile文件，而是使用/etc/zsh/下面的zshenv、zprofile、zshrc、zlogin文件，并以这个顺序进行加载。</p><p>所以推测还有一种方法，在/etc/zsh/zprofile下面export相应的环境变量.</p><h4 id="问题２："><a href="#问题２：" class="headerlink" title="问题２："></a>问题２：</h4><p>在后面的使用中，发现切换到root用户的时候，java的环境变量又不生效了。</p><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h4><p>在/root/.bashrc文件尾部添加：<br>source /etc/profile</p><p>ok，完美解决</p>]]></content>
+      
+      
+        <tags>
+            
+            <tag> [object Object] </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>ubuntu实现定时弹窗</title>
       <link href="//posts/a4c0e361/"/>
       <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h5 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h5><p>最近在头条上看到，长期久坐８小时以上会影响生育能力，突然有点慌，作为一个IT工作者，８小时．．．．然后我这人没有喝水的习惯，经常专注电脑，就想着，有没有什么办法可以定时提醒你喝水，休息的。<br><a id="more"></a></p><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><p>因为我用的是ubuntu，用到提醒功能就让我想起了notify-send命令。<br>notify-send是一个可以让你发送桌面通知的命令. 它的语法非常简单:</p><pre><code>notify-send [其他选项...] 标题 [内容]</code></pre><p>提醒解决了，那怎么实现定时功能呢。<br>通过我的查阅，我找到了crontab这个命令</p><pre><code>在LINUX中，周期执行的任务一般由cron这个守护进程来处理[ps -ef|grep cron]。cron读取一个或多个配置文件，这些配置文件中包含了命令行及其调用时间。cron的配置文件称为“crontab”，是“cron table”的简写。</code></pre><h5 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h5><pre><code>vi time.cron  //创建一个cron脚本</code></pre><h6 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h6><pre><code>0 */1.5 * * * export DISPLAY=:0.0; notify-send [&quot;该休息一下啦&quot;] &quot;喝水！伸懒腰！&gt;动一动！&quot;</code></pre>]]></content>

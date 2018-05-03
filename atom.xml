@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kevinfaith.cn/"/>
-  <updated>2018-04-25T12:02:16.121Z</updated>
+  <updated>2018-05-03T02:09:27.236Z</updated>
   <id>http://www.kevinfaith.cn/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</title>
+    <link href="http://www.kevinfaith.cn//posts/8987dd48/"/>
+    <id>http://www.kevinfaith.cn//posts/8987dd48/</id>
+    <published>2018-05-03T02:09:27.236Z</published>
+    <updated>2018-05-03T02:09:27.236Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="问题１："><a href="#问题１：" class="headerlink" title="问题１："></a>问题１：</h4><p>今天在添加java的环境变量的时候，我在<code>/etc/profile</code>添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，<code>java -version</code>以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。<code>java -version</code>提示没有此命令，懵~</p> <a id="more"></a><h4 id="推测问题原因"><a href="#推测问题原因" class="headerlink" title="推测问题原因:"></a><strong>推测问题原因:</strong></h4><p>由于在终端中source /etc/profile只是让本shell进程执行，相当于只是在本shell执行了环境变量，所以重启之后依旧失效</p><h4 id="推测解决方法"><a href="#推测解决方法" class="headerlink" title="推测解决方法:"></a>推测解决方法:</h4><p>在<code>~/.zshrc</code>中添加<code>source /etc/profile</code></p><p>重启shell</p><p>输入<code>java -version</code></p><p>完美解决!</p><p>通过百度发现:zsh其实并不使用/etc/profile文件，而是使用/etc/zsh/下面的zshenv、zprofile、zshrc、zlogin文件，并以这个顺序进行加载。</p><p>所以推测还有一种方法，在/etc/zsh/zprofile下面export相应的环境变量.</p><h4 id="问题２："><a href="#问题２：" class="headerlink" title="问题２："></a>问题２：</h4><p>在后面的使用中，发现切换到root用户的时候，java的环境变量又不生效了。</p><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h4><p>在/root/.bashrc文件尾部添加：<br>source /etc/profile</p><p>ok，完美解决</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;问题１：&quot;&gt;&lt;a href=&quot;#问题１：&quot; class=&quot;headerlink&quot; title=&quot;问题１：&quot;&gt;&lt;/a&gt;问题１：&lt;/h4&gt;&lt;p&gt;今天在添加java的环境变量的时候，我在&lt;code&gt;/etc/profile&lt;/code&gt;添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，&lt;code&gt;java -version&lt;/code&gt;以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。&lt;code&gt;java -version&lt;/code&gt;提示没有此命令，懵~&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="[object Object]" scheme="http://www.kevinfaith.cn/tags/object-Object/"/>
+    
+  </entry>
   
   <entry>
     <title>ubuntu实现定时弹窗</title>

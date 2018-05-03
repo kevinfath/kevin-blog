@@ -6,13 +6,13 @@
     
     
     
-    <title>linux下修改文件所属用户组和文件权限的方法 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
+    <title>解决在/etc/porfile下设置环境变量以后zsh没有起效的问题 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="linux">
+    <meta name="keywords" content="[object Object]">
     
     
 
@@ -39,18 +39,18 @@
 
 
     
-    <meta name="description" content="linux下修改文件所属用户组和修改文件权限的方法  修改文件所属用户组的命令是chown，这个命令的格式是   chown    [-R]    username  filenamechown    [-R]    username:group filename">
-<meta name="keywords" content="linux">
+    <meta name="description" content="问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，java -version以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。java -version提示没有此命令，懵~">
+<meta name="keywords" content="[object Object]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux下修改文件所属用户组和文件权限的方法">
-<meta property="og:url" content="http://www.kevinfaith.cn/posts/51489/index.html">
+<meta property="og:title" content="解决在&#x2F;etc&#x2F;porfile下设置环境变量以后zsh没有起效的问题">
+<meta property="og:url" content="http://www.kevinfaith.cn/posts/8987dd48/index.html">
 <meta property="og:site_name" content="kevin-blog">
-<meta property="og:description" content="linux下修改文件所属用户组和修改文件权限的方法  修改文件所属用户组的命令是chown，这个命令的格式是   chown    [-R]    username  filenamechown    [-R]    username:group filename">
+<meta property="og:description" content="问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，java -version以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。java -version提示没有此命令，懵~">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-20T04:52:45.240Z">
+<meta property="og:updated_time" content="2018-05-03T02:09:27.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux下修改文件所属用户组和文件权限的方法">
-<meta name="twitter:description" content="linux下修改文件所属用户组和修改文件权限的方法  修改文件所属用户组的命令是chown，这个命令的格式是   chown    [-R]    username  filenamechown    [-R]    username:group filename">
+<meta name="twitter:title" content="解决在&#x2F;etc&#x2F;porfile下设置环境变量以后zsh没有起效的问题">
+<meta name="twitter:description" content="问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，java -version以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。java -version提示没有此命令，懵~">
     
         <link rel="alternate" type="application/atom+xml" title="kevin-blog" href="/atom.xml">
     
@@ -152,7 +152,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">linux下修改文件所属用户组和文件权限的方法</div>
+        <div class="flex-col header-title ellipsis">解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -189,20 +189,28 @@
 
 <div class="container body-wrap">
     
-<article id="post-linux"
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题１："><span class="post-toc-number">1.</span> <span class="post-toc-text">问题１：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#推测问题原因"><span class="post-toc-number">2.</span> <span class="post-toc-text">推测问题原因:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#推测解决方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">推测解决方法:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题２："><span class="post-toc-number">4.</span> <span class="post-toc-text">问题２：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决办法"><span class="post-toc-number">5.</span> <span class="post-toc-text">解决办法:</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-解决在-etc-porfile下设置环境变量以后zsh没有起效的问题"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">linux下修改文件所属用户组和文件权限的方法</h1>
+        <h1 class="post-card-title">解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2017-02-15 00:00:00" datetime="2017-02-14T16:00:00.000Z"  itemprop="datePublished">2017-02-15</time>
+            <time class="post-time" title="2018-05-03 10:09:27" datetime="2018-05-03T02:09:27.236Z"  itemprop="datePublished">2018-05-03</time>
 
             <br id="mybreak"/>
             
-	<i class="icon icon-lg icon-folder-o"></i>
-	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/linux命令/">linux命令</a></li></ul>
+<script>
+	mybreak.style="display:none";
+</script>
 
 
             <i>·</i>
@@ -218,29 +226,18 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>linux下修改文件所属用户组和修改文件权限的方法</p>
-<ol>
-<li>修改文件所属用户组的命令是chown，这个命令的格式是</li>
-</ol>
-<blockquote>
-<p>chown    [-R]    username  filename<br>chown    [-R]    username:group filename</p>
-</blockquote>
-<a id="more"></a>
-<p>第一个是修改文件所属的的用户，第二个修改文件所属用户组,-R属性为可选属性，意思是递归修改，也就是把文件下所有文件，包括子目录一起修改，大多数情况下-R 属性都是这个意思。</p>
-<p>2.修改文件权限的命令是chmod，这个命令的格式是有两种设置方法有数字法与文字法i，数字法</p>
-<p>就是用数字来代替rwx，r、w、x分别对应4、2、1，这个命令的格式为</p>
-<blockquote>
-<p>chmod  [-R]  xyz  filename</p>
-</blockquote>
-<p>其中x代表owner权限，y代表group权限，z代表others权限，以上三种身份的值就是rwx的和，r代表读，w写 ，x运行，如果没有相应的权限则值为0。<br>如想设置.bashrc文件的权限为owner为rwx，group权限为无，others权限为无，则命令如下</p>
-<blockquote>
-<p>chmod 700 .bashrc</p>
-</blockquote>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33875750&auto=1&height=66"></iframe>
-
-
-
-
+            <h4 id="问题１："><a href="#问题１：" class="headerlink" title="问题１："></a>问题１：</h4><p>今天在添加java的环境变量的时候，我在<code>/etc/profile</code>添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，<code>java -version</code>以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。<code>java -version</code>提示没有此命令，懵~</p>
+ <a id="more"></a>
+<h4 id="推测问题原因"><a href="#推测问题原因" class="headerlink" title="推测问题原因:"></a><strong>推测问题原因:</strong></h4><p>由于在终端中source /etc/profile只是让本shell进程执行，相当于只是在本shell执行了环境变量，所以重启之后依旧失效</p>
+<h4 id="推测解决方法"><a href="#推测解决方法" class="headerlink" title="推测解决方法:"></a>推测解决方法:</h4><p>在<code>~/.zshrc</code>中添加<code>source /etc/profile</code></p>
+<p>重启shell</p>
+<p>输入<code>java -version</code></p>
+<p>完美解决!</p>
+<p>通过百度发现:zsh其实并不使用/etc/profile文件，而是使用/etc/zsh/下面的zshenv、zprofile、zshrc、zlogin文件，并以这个顺序进行加载。</p>
+<p>所以推测还有一种方法，在/etc/zsh/zprofile下面export相应的环境变量.</p>
+<h4 id="问题２："><a href="#问题２：" class="headerlink" title="问题２："></a>问题２：</h4><p>在后面的使用中，发现切换到root用户的时候，java的环境变量又不生效了。</p>
+<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h4><p>在/root/.bashrc文件尾部添加：<br>source /etc/profile</p>
+<p>ok，完美解决</p>
 
         </div>
 
@@ -248,12 +245,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2018-04-20T04:52:45.240Z" itemprop="dateUpdated">2018-04-20 12:52:45</time>
+    最后更新：<time datetime="2018-05-03T02:09:27.236Z" itemprop="dateUpdated">2018-05-03 10:09:27</time>
 </span>
 
 
         
-        原文链接：<a href="/posts/51489/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/51489/</a>
+        原文链接：<a href="/posts/8987dd48/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/8987dd48/</a>
         
     </div>
     <footer>
@@ -275,7 +272,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/">[object Object]</a></li></ul>
 
 
             
@@ -285,7 +282,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/51489/&title=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -295,27 +292,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/51489/&title=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&source=linux下修改文件所属用户组和修改文件权限的方法
-
-修改文件所属用户组的命令是chown，这个命令的格式是
-
-
-chown    [-R]    use..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&source=问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/51489/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&url=http://www.kevinfaith.cn/posts/51489/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&url=http://www.kevinfaith.cn/posts/8987dd48/&via=http://www.kevinfaith.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/51489/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -335,17 +327,15 @@ chown    [-R]    use..." data-title=" QQ">
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/posts/15245/" id="post-prev" class="post-nav-link">
-        <h4 class="title" >
-          上一篇：linux下实现计划任务的方法
-        </h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
+  
+    <div class="waves-block waves-effect next">
+      <a href="/posts/a4c0e361/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：ubuntu实现定时弹窗">下一篇：ubuntu实现定时弹窗</h4>
+      </a>
+    </div>
   
 </nav>
 
@@ -442,7 +432,7 @@ chown    [-R]    use..." data-title=" QQ">
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/51489/&title=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -452,27 +442,22 @@ chown    [-R]    use..." data-title=" QQ">
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/51489/&title=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&source=linux下修改文件所属用户组和修改文件权限的方法
-
-修改文件所属用户组的命令是chown，这个命令的格式是
-
-
-chown    [-R]    use..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&source=问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/51489/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《linux下修改文件所属用户组和文件权限的方法》 — kevin-blog&url=http://www.kevinfaith.cn/posts/51489/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&url=http://www.kevinfaith.cn/posts/8987dd48/&via=http://www.kevinfaith.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/51489/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -483,7 +468,7 @@ chown    [-R]    use..." data-title=" QQ">
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p class="wechatshare">扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aQY7DIBAEwPz/015pT5GysXsYwF6pOFlxYso5jKCZ1ysex+94v/4cyd1vz5w8cHFx29zjdHS4376fP/OPV8LFxd3I7Rev89/m1xc2XFzch3Grq47k5XFxcf879/yT5DWqfwcuLu693E7YkRemfIM0Ya+Gi4vb4I4FpnOvl+e7uLi4k04lkgXK+dKkGqRezI6Li7uFm8Sd+XZo1tHsRZnDxcXdws0nGFt19PsrcHFxd3Lzh1bD0+pxbHRki4uLu4XbyR+SRdLY31GtWri4uHO5eZSZB6BjQUkUvuDi4m7nJhNUW6zyporCaTAuLu5ibjUendWukRtwcXH3c/uxxdjdPH69SHFwcXGXcfOYsjVZIxDBxcW9i7tu+moscnHyg4uLu5jbD0PzTc7YFmjwQAUXF7fBPeJR3erMikpxcXHv4va3N53Gi0JGiouLu5E7Vs7GylO18JX7xXBxcdvcakEpl55iG0d+FxcXdzW3U7xWbJaixixcXNwt3KQxK488yoi4LOLi4j6NW10G5a0VecCKi4v7TG5+XJq3XCRLIlxc3P3c6oOqrE4UMhiL4OLiNridwHQsDM03S7i4uNu5P7aQ3USpQztMAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3aQY4CMQwEQP7/6VlptUcmatuZgFaVE0IQajhYSduvV7yu33X3znWz7r67fn/DwsXFHXOv5VpzE3SyZ/J5XFzc89x1oUlw1aLWLHa4uLhfxl3Tq69xcXH/B7d6iLnDHa27uLi4A25yNIkuJ0ti7+KEi4t7nlsNTJ94/WC+i4uLW+RODi7Vn58ErH/fwsXFPcJNGqjVoGQSpEYPj4uL+zC3V1zWrZTk8lM9yeDi4p7n9tobSQA6GeN4szMuLu5xbvlkFJTCPP6ISiEuLu4RbhWdj1vN99zwH+Pi4ra4+Ud77ZB8qKLZDcbFxX2A27u0zOPR/MFwcXHPc/Mhib2RRxK4vNkZFxf3CLdXNyat2V4ggouLe5JbbaBWDzqT2YnbVgouLu7D3DzmmMcfvStQNISBi4u7ldsLTCct0mpUiouL+ylur32yObVNxjtwcXEPcvOVHGiq+ySPXf4BXFzcAbdaUPKLTT6qle+Pi4t7klstXtUjTnWf8jQZLi7uY9xdcWcUcOw9vuDi4n6Um19yqqMVhRYOLi7u13OTwpc8anIkwsXFPc/thZu9i001CmnGIri4uANu9cYxiUImkSsuLu4R7g896ouyM5cUjgAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
