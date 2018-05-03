@@ -6,13 +6,13 @@
     
     
     
-    <title>解决在/etc/porfile下设置环境变量以后zsh没有起效的问题 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
+    <title>介绍一个安卓远控木马 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="[object Object]">
+    <meta name="keywords" content="木马,[object Object]">
     
     
 
@@ -39,18 +39,20 @@
 
 
     
-    <meta name="description" content="问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，java -version以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。java -version提示没有此命令，懵~">
-<meta name="keywords" content="[object Object]">
+    <meta name="description" content="##### 简介：安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马 &amp;lt;!-- more –&amp;gt; 工具：java的运行环境 AhMyth Android RAT应用程序 系统:ubuntu18.04安装：源代码编译： git clone https://git">
+<meta name="keywords" content="木马,[object Object]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决在&#x2F;etc&#x2F;porfile下设置环境变量以后zsh没有起效的问题">
-<meta property="og:url" content="http://www.kevinfaith.cn/posts/8987dd48/index.html">
+<meta property="og:title" content="介绍一个安卓远控木马">
+<meta property="og:url" content="http://www.kevinfaith.cn/posts/e716bc90/index.html">
 <meta property="og:site_name" content="kevin-blog">
-<meta property="og:description" content="问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，java -version以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。java -version提示没有此命令，懵~">
+<meta property="og:description" content="##### 简介：安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马 &amp;lt;!-- more –&amp;gt; 工具：java的运行环境 AhMyth Android RAT应用程序 系统:ubuntu18.04安装：源代码编译： git clone https://git">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-03T02:10:49.997Z">
+<meta property="og:image" content="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg">
+<meta property="og:updated_time" content="2018-05-03T03:24:08.196Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决在&#x2F;etc&#x2F;porfile下设置环境变量以后zsh没有起效的问题">
-<meta name="twitter:description" content="问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，java -version以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。java -version提示没有此命令，懵~">
+<meta name="twitter:title" content="介绍一个安卓远控木马">
+<meta name="twitter:description" content="##### 简介：安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马 &amp;lt;!-- more –&amp;gt; 工具：java的运行环境 AhMyth Android RAT应用程序 系统:ubuntu18.04安装：源代码编译： git clone https://git">
+<meta name="twitter:image" content="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg">
     
         <link rel="alternate" type="application/atom+xml" title="kevin-blog" href="/atom.xml">
     
@@ -152,7 +154,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</div>
+        <div class="flex-col header-title ellipsis">介绍一个安卓远控木马</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -192,19 +194,19 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题１："><span class="post-toc-number">1.</span> <span class="post-toc-text">问题１：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#推测问题原因"><span class="post-toc-number">2.</span> <span class="post-toc-text">推测问题原因:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#推测解决方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">推测解决方法:</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题２："><span class="post-toc-number">4.</span> <span class="post-toc-text">问题２：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决办法"><span class="post-toc-number">5.</span> <span class="post-toc-text">解决办法:</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简介："><span class="post-toc-number">1.</span> <span class="post-toc-text">简介：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#工具："><span class="post-toc-number">2.</span> <span class="post-toc-text">工具：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#系统-ubuntu18-04"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">系统:ubuntu18.04</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#安装："><span class="post-toc-number">3.</span> <span class="post-toc-text">安装：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#方式二："><span class="post-toc-number">3.1.</span> <span class="post-toc-text">方式二：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#软件截图"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">软件截图</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最后："><span class="post-toc-number">4.</span> <span class="post-toc-text">最后：</span></a></li></ol>
         </nav>
     </aside>
    
-<article id="post-解决在-etc-porfile下设置环境变量以后zsh没有起效的问题"
+<article id="post-介绍一个安卓远控木马"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</h1>
+        <h1 class="post-card-title">介绍一个安卓远控木马</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2018-05-03 10:10:49" datetime="2018-05-03T02:10:49.997Z"  itemprop="datePublished">2018-05-03</time>
+            <time class="post-time" title="2018-05-03 11:24:08" datetime="2018-05-03T03:24:08.196Z"  itemprop="datePublished">2018-05-03</time>
 
             <br id="mybreak"/>
             
@@ -226,18 +228,30 @@
             阅读本文可能花费您&nbsp;<span class="post-count">1</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h4 id="问题１："><a href="#问题１：" class="headerlink" title="问题１："></a>问题１：</h4><p>今天在添加java的环境变量的时候，我在<code>/etc/profile</code>添加了环境变量，因为我使用的是zsh，在source /etc/profile以后，zsh的主题和插件都没有了，<code>java -version</code>以后出现旗标信息，以为可以了，但是没有主题就很难受，重启shell。<code>java -version</code>提示没有此命令，懵~</p>
- <a id="more"></a>
-<h4 id="推测问题原因"><a href="#推测问题原因" class="headerlink" title="推测问题原因:"></a><strong>推测问题原因:</strong></h4><p>由于在终端中source /etc/profile只是让本shell进程执行，相当于只是在本shell执行了环境变量，所以重启之后依旧失效</p>
-<h4 id="推测解决方法"><a href="#推测解决方法" class="headerlink" title="推测解决方法:"></a>推测解决方法:</h4><p>在<code>~/.zshrc</code>中添加<code>source /etc/profile</code></p>
-<p>重启shell</p>
-<p>输入<code>java -version</code></p>
-<p>完美解决!</p>
-<p>通过百度发现:zsh其实并不使用/etc/profile文件，而是使用/etc/zsh/下面的zshenv、zprofile、zshrc、zlogin文件，并以这个顺序进行加载。</p>
-<p>所以推测还有一种方法，在/etc/zsh/zprofile下面export相应的环境变量.</p>
-<h4 id="问题２："><a href="#问题２：" class="headerlink" title="问题２："></a>问题２：</h4><p>在后面的使用中，发现切换到root用户的时候，java的环境变量又不生效了。</p>
-<h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法:"></a>解决办法:</h4><p>在/root/.bashrc文件尾部添加：<br>source /etc/profile</p>
-<p>ok，完美解决</p>
+            <p>#####</p>
+<h4 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h4><p>安全10月24日讯 新型安卓远程管理工具“AhMyth Android RAT”的源码出现在GitHub上，用户可在GitHub下载并测试这款RAT。今天就体验一下这款安卓远控木马</p>
+<p>&lt;!-- more –&gt;</p>
+<h4 id="工具："><a href="#工具：" class="headerlink" title="工具："></a>工具：</h4><p>java的运行环境</p>
+<p>AhMyth Android RAT应用程序</p>
+<h5 id="系统-ubuntu18-04"><a href="#系统-ubuntu18-04" class="headerlink" title="系统:ubuntu18.04"></a>系统:ubuntu18.04</h5><h4 id="安装："><a href="#安装：" class="headerlink" title="安装："></a>安装：</h4><p>源代码编译：</p>
+<pre><code>git clone https://github.com/AhMyth/AhMyth-Android-RAT.git
+cd AhMyth-Android-RAT/AhMyth-Server
+npm install
+npm start
+</code></pre><p>因为要用到java的环境，所以最好<code>sudo npm start</code></p>
+<h5 id="方式二："><a href="#方式二：" class="headerlink" title="方式二："></a>方式二：</h5><p>二进制文件安装：</p>
+<p>从<a href="https://github.com/AhMyth/AhMyth-Android-RAT/releases" target="_blank" rel="noopener">https://github.com/AhMyth/AhMyth-Android-RAT/releases</a>下载二进制文件</p>
+<p>下载AhMyth_linux64.deb</p>
+<pre><code>sudo dpkg -i AhMyth_linux64.deb
+sudo /usr/local/bin/ahmyth
+</code></pre><h5 id="软件截图"><a href="#软件截图" class="headerlink" title="软件截图"></a>软件截图</h5><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1fqxypqtuf6j30m70gr3yv.jpg" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+<h4 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h4><p>本博客只是出于教育目的，对于因使用此工具而造成的任何直接或间接损失，我概不负责。</p>
 
         </div>
 
@@ -245,12 +259,12 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新：<time datetime="2018-05-03T02:10:49.997Z" itemprop="dateUpdated">2018-05-03 10:10:49</time>
+    最后更新：<time datetime="2018-05-03T03:24:08.196Z" itemprop="dateUpdated">2018-05-03 11:24:08</time>
 </span>
 
 
         
-        原文链接：<a href="/posts/8987dd48/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/8987dd48/</a>
+        原文链接：<a href="/posts/e716bc90/" target="_blank" rel="external">http://www.kevinfaith.cn/posts/e716bc90/</a>
         
     </div>
     <footer>
@@ -272,7 +286,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/">[object Object]</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/object-Object/">[object Object]</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/木马/">木马</a></li></ul>
 
 
             
@@ -282,7 +296,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/e716bc90/&title=《介绍一个安卓远控木马》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -292,22 +306,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&source=问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/e716bc90/&title=《介绍一个安卓远控木马》 — kevin-blog&source=blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/e716bc90/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&url=http://www.kevinfaith.cn/posts/8987dd48/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《介绍一个安卓远控木马》 — kevin-blog&url=http://www.kevinfaith.cn/posts/e716bc90/&via=http://www.kevinfaith.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/e716bc90/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -327,21 +341,13 @@
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/posts/e716bc90/" id="post-prev" class="post-nav-link">
-        <h4 class="title" >
-          上一篇：介绍一个安卓远控木马
-        </h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/posts/a4c0e361/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：ubuntu实现定时弹窗">下一篇：ubuntu实现定时弹窗</h4>
+      <a href="/posts/8987dd48/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：解决在/etc/porfile下设置环境变量以后zsh没有起效的问题">下一篇：解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</h4>
       </a>
     </div>
   
@@ -440,7 +446,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.kevinfaith.cn/posts/e716bc90/&title=《介绍一个安卓远控木马》 — kevin-blog&pic=http://www.kevinfaith.cn/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -450,22 +456,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/8987dd48/&title=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&source=问题１：今天在添加java的环境变量的时候，我在/etc/profile添加了环境变量，因为我使用的是zsh，在source /etc/profile以后..." data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.kevinfaith.cn/posts/e716bc90/&title=《介绍一个安卓远控木马》 — kevin-blog&source=blog" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kevinfaith.cn/posts/e716bc90/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《解决在/etc/porfile下设置环境变量以后zsh没有起效的问题》 — kevin-blog&url=http://www.kevinfaith.cn/posts/8987dd48/&via=http://www.kevinfaith.cn" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《介绍一个安卓远控木马》 — kevin-blog&url=http://www.kevinfaith.cn/posts/e716bc90/&via=http://www.kevinfaith.cn" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/8987dd48/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.kevinfaith.cn/posts/e716bc90/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -476,7 +482,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p class="wechatshare">扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByUlEQVR42u3aQY4CMQwEQP7/6VlptUcmatuZgFaVE0IQajhYSduvV7yu33X3znWz7r67fn/DwsXFHXOv5VpzE3SyZ/J5XFzc89x1oUlw1aLWLHa4uLhfxl3Tq69xcXH/B7d6iLnDHa27uLi4A25yNIkuJ0ti7+KEi4t7nlsNTJ94/WC+i4uLW+RODi7Vn58ErH/fwsXFPcJNGqjVoGQSpEYPj4uL+zC3V1zWrZTk8lM9yeDi4p7n9tobSQA6GeN4szMuLu5xbvlkFJTCPP6ISiEuLu4RbhWdj1vN99zwH+Pi4ra4+Ud77ZB8qKLZDcbFxX2A27u0zOPR/MFwcXHPc/Mhib2RRxK4vNkZFxf3CLdXNyat2V4ggouLe5JbbaBWDzqT2YnbVgouLu7D3DzmmMcfvStQNISBi4u7ldsLTCct0mpUiouL+ylur32yObVNxjtwcXEPcvOVHGiq+ySPXf4BXFzcAbdaUPKLTT6qle+Pi4t7klstXtUjTnWf8jQZLi7uY9xdcWcUcOw9vuDi4n6Um19yqqMVhRYOLi7u13OTwpc8anIkwsXFPc/thZu9i001CmnGIri4uANu9cYxiUImkSsuLu4R7g896ouyM5cUjgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABu0lEQVR42u3aSW4DMQwEQP//087VQKCkSVGyE5ROxmCWkg8EFz0e8Xq+rNX17+v1ntU7HycWLi7uNjf/5OrKCpdsLzfg4uLe5/4caHq/f/5wM9jh4uJ+JHdqY7i4uP+Ju0w+4sIGFxf3r3Dz1kYvPOXF1VithouLu8HNu5Tnfh/p7+Li4ra4z+KaLXvKX8fFxb3CzQNK/rrq28p34uLivok71Srt5VzlISsuLu4od3bUkSRDW80RXFzcK9xq+pKMQ6aapMs/CxcX9zC3h9sJeb3DW7i4uDe51SZItezJ39ArvXBxcU9zx8JKq3WSB0pcXNzT3P3RyM6QtZpI4eLi3ufmRU61gOkdwvglkOHi4h7j7jRAc0o1DUqu4+LinuYmqUm15dE7jBWVW7i4uG/iVjusO5tMiLi4uO/i5qOOPEjlDZHCd3FxcQ9zn8VVfarXainPfnFxcUe51UFpUrr0WiHJcAUXF/cmtzdqze9PipwkPcLFxb3P7R2tqG5gIJXBxcX9SG7SNOkdrYgatbi4uB/J7Q1aqk8thbi4uBe5OwlKtUmaBMeBWg0XF3eD26s4Zo9oTDVhcXFxt7lfUtJxsPTDXjgAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
