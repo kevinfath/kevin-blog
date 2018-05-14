@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kevinfaith.cn/"/>
-  <updated>2018-05-03T04:18:35.825Z</updated>
+  <updated>2018-05-14T13:05:18.107Z</updated>
   <id>http://www.kevinfaith.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python版本管理工具:pyenv</title>
+    <link href="http://www.kevinfaith.cn//posts/d8223d25/"/>
+    <id>http://www.kevinfaith.cn//posts/d8223d25/</id>
+    <published>2018-05-14T13:05:18.000Z</published>
+    <updated>2018-05-14T13:05:18.107Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>MinHow-This is a summary<br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MinHow-This is a summary&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="First" scheme="http://www.kevinfaith.cn/tags/First/"/>
+    
+      <category term="Second" scheme="http://www.kevinfaith.cn/tags/Second/"/>
+    
+  </entry>
   
   <entry>
     <title>介绍一个安卓远控木马</title>

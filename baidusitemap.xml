@@ -3,6 +3,26 @@
 
 
     
+    
+  <url>
+    <loc>http://www.kevinfaith.cn//posts/d8223d25/</loc>
+    <lastmod>2018-05-14T13:05:18.107Z</lastmod>
+    <data>
+        <display>
+        <title>python版本管理工具:pyenv</title>
+        <pubTime>2018-05-14T13:05:18.000Z</pubTime>
+        
+        <tag>First</tag>
+         
+        <tag>Second</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.kevinfaith.cn//posts/e716bc90/</loc>
     <lastmod>2018-05-03T04:18:35.825Z</lastmod>
@@ -243,6 +263,26 @@
 
     
   <url>
+    <loc>http://www.kevinfaith.cn//posts/15133/</loc>
+    <lastmod>2018-04-20T04:52:45.236Z</lastmod>
+    <data>
+        <display>
+        <title>acm C语言鸡兔同笼问题</title>
+        <pubTime>2017-03-02T16:00:00.000Z</pubTime>
+        
+        <tag>acm</tag>
+         
+         
+           
+             
+              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.kevinfaith.cn//posts/26725/</loc>
     <lastmod>2018-04-20T04:52:45.236Z</lastmod>
     <data>
@@ -258,26 +298,6 @@
            
              
               <breadCrumb title="渗透测试" url="http://www.kevinfaith.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.kevinfaith.cn//posts/15133/</loc>
-    <lastmod>2018-04-20T04:52:45.236Z</lastmod>
-    <data>
-        <display>
-        <title>acm C语言鸡兔同笼问题</title>
-        <pubTime>2017-03-02T16:00:00.000Z</pubTime>
-        
-        <tag>acm</tag>
-         
-         
-           
-             
-              <breadCrumb title="acm编程" url="http://www.kevinfaith.cn/categories/acm%E7%BC%96%E7%A8%8B/"/>
           
         </display>
     </data>
