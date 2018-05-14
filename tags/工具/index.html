@@ -6,7 +6,7 @@
     
     
     
-    <title>归档: 2018 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
+    <title>标签: 工具 | kevin-blog | Look at the man in front of you and see why he&#39;s ahead and learn his way of doing it</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
@@ -42,7 +42,7 @@
     <meta name="description" content="blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="kevin-blog">
-<meta property="og:url" content="http://www.kevinfaith.cn/archives/2018/index.html">
+<meta property="og:url" content="http://www.kevinfaith.cn/tags/工具/index.html">
 <meta property="og:site_name" content="kevin-blog">
 <meta property="og:description" content="blog">
 <meta property="og:locale" content="zh-CN">
@@ -91,7 +91,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect active">
+              <li class="waves-block waves-effect">
                   <a href="/archives"  >
                     <i class="icon icon-lg icon-archives"></i>
                     <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
@@ -105,7 +105,7 @@
                   </a>
               </li>
             
-              <li class="waves-block waves-effect">
+              <li class="waves-block waves-effect active">
                   <a href="/tags"  >
                     <i class="icon icon-lg icon-tags"></i>
                     <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
@@ -150,7 +150,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">归档</div>
+        <div class="flex-col header-title ellipsis">标签: 工具</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -167,7 +167,7 @@
         </a>
     </div>
 </header>
-<header class="content-header archives-header">
+<header class="content-header tags-header">
     
     
     <div class="container fade-scale">
@@ -177,7 +177,19 @@
             </h1>
             <h5 class="subtitle">
                 
-                    <h1 class="archivestitle">路漫漫其修远兮</h1>
+                    <h1 id="pagetitle" class="archivestitle"></h1>
+                    <script>
+                        if(location.href.indexOf('about')!=-1){
+                            pagetitle.textContent = 'kevin';
+                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
+                            var a=location.href.substring(location.href.length-5,location.href.length-1);
+                            if(a==='tags'){
+                                pagetitle.textContent = '不积小流无以成江海';
+                            }else if(a==='ries'){
+                                pagetitle.textContent = '不积跬步无以至千里';
+                            }
+                        }
+                    </script>
                 
             </h5>
         </div>
@@ -185,25 +197,26 @@
 
 </header>
 
-<div class="container body-wrap fade">
-    
 
-    
+    <div class="container body-wrap fade">
+        
             
-            <h3 class="archive-separator">
-                <i class="icon icon-lg icon-folder-o"></i>&nbsp;&nbsp;
-                2018
-            </h3>
+            
+            <h5 class="tag-tip">
+                <i class="icon icon-tag"></i>
+                关于
+                <span style="color:rgb(100, 100, 100)">工具</span>
+                共1篇文章
+            </h5>
             <div class="waterfall">
-    
-
-        <article class="archive-article" onclick="location.href='/posts/d8223d25/'">
+            
+                <article class="archive-article" onclick="location.href='/posts/d8223d25/'">
     <div class="archive-article-date">
       
       <time class="my-post-time">
         <i class="icon icon-lg icon-file-text-o"></i>
         &nbsp;
-          05-14
+          2018-05-14
       </time>
     </div>
     <div class="archive-article-inner">
@@ -223,277 +236,9 @@
 
     </div>
   </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/e716bc90/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          05-03
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/e716bc90/">介绍一个安卓远控木马</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android-RAT/">Android RAT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/木马/">木马</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/8987dd48/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          05-02
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/8987dd48/">解决在/etc/porfile下设置环境变量以后zsh没有起效的问题</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/a4c0e361/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          04-25
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/a4c0e361/">ubuntu实现定时弹窗</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/crontab/">crontab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notify-send/">notify-send</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/cf2eaaff/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          04-24
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/cf2eaaff/">致我深爱的人</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/情感/">情感</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/爱情/">爱情</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/矫情/">矫情</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/89374c81/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          04-21
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/89374c81/">区块链</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/以太坊/">以太坊</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/区块链/">区块链</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/11406/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          04-10
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/11406/">学会如何让你在网络上变的相对匿名</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/梯子/">梯子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/26725/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          04-07
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/26725/">beef漏洞利用框架安装.md</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/XSS/">XSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/3818/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          03-24
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/3818/">介绍一款牛逼的渗透测试框架</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kali/">kali</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渗透测试/">渗透测试</a></li></ul>
-
-    </div>
-  </article>
-
-    
-
-        <article class="archive-article" onclick="location.href='/posts/38299/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          03-15
-      </time>
-    </div>
-    <div class="archive-article-inner">
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/posts/38299/">linux给终端、git设置代理</a>
-    </h3>
-  
-
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shadowsocks/">Shadowsocks</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代理/">代理</a></li></ul>
-
-    </div>
-  </article>
-
-    
-    </div>
-
-    
-<nav id="page-nav">
-    <div class="inner">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/">下一页</a>
-    </div>
-</nav>
+            
+            </div>
+        
 
 </div>
 

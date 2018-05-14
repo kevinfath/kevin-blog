@@ -5,14 +5,14 @@
     <entry>
       <title>python版本管理工具:pyenv</title>
       <link href="//posts/d8223d25/"/>
-      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>MinHow-This is a summary<br><a id="more"></a></p>]]></content>
+      <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>####　简介：<br>这几天在学习python，因为我学的是python3的语法，但是我ubuntu默认安装的是python2，我sqlmap需要的环境也是python2的，但是我需要python3的环境作为学习，这怎么办呢，经过查阅资料，学习，我发现了一个神器，python的版本管理工具：pyenv，他支持python多版本共存，并可以随时切换。且不会互相影响。<br><a id="more"></a></p><h4 id="安装pyenv："><a href="#安装pyenv：" class="headerlink" title="安装pyenv："></a>安装pyenv：</h4><pre><code>curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash  </code></pre><p>安装完毕会提醒：</p><pre><code># Load pyenv automatically by adding  # the following to ~/.bash_profile:  export PATH=&quot;/root/.pyenv/bin:$PATH&quot;  eval &quot;$(pyenv init -)&quot;  eval &quot;$(pyenv virtualenv-init -)&quot; </code></pre><p>因为我用的是zsh，zsh没有设置是不会读取~/.bash_profile的，so</p><pre><code>vi ~/.zshrc</code></pre><p>在文档末粘贴：</p><pre><code>export PATH=&quot;/root/.pyenv/bin:$PATH&quot;  eval &quot;$(pyenv init -)&quot;  eval &quot;$(pyenv virtualenv-init -)&quot; </code></pre><p>:wq  保存退出!</p><pre><code>source ~/.zshrc</code></pre><p>重启一下配置文件,然后执行：</p><pre><code>python -h /home/blog/source/_posts ‹ruby-2.3.0›  $ pyenv -h                         130 ↵Usage: pyenv &lt;command&gt; [&lt;args&gt;]Some useful pyenv commands are:   commands    List all available pyenv commands   local       Set or show the local application-specific Python version   global      Set or show the global Python version   shell       Set or show the shell-specific Python version   install     Install a Python version using python-build   uninstall   Uninstall a specific Python version   rehash      Rehash pyenv shims (run this after installing executables)   version     Show the current Python version and its origin   versions    List all Python versions available to pyenv   which       Display the full path to an executable   whence      List all Python versions that contain the given executableSee `pyenv help &lt;command&gt;&apos; for information on a specific         command.    For full documentation, see: https://github.com/pyenv/pyenv#readme</code></pre><p>安装成功~</p><p>简单的介绍一下常用的命令：</p><pre><code>pyenv install --list 　　　　　　　//查看可安装的python版本pyenv install 3.5.0　　　　　　　//安装python3.5.0pyenv rehash                    //更新数据库，在安装 Python 或者其他带有可执行文件的模块之后，需要对数据库进行更新：pyenv versions　　　　　　　　//查看当前使用的python版本pyevn  global  3.5.0 　　　　　　//切换python全局版本为3.5.0pyenv uninstall  3.5.0　　　　　//删除python3.5.0　　　</code></pre>]]></content>
       
       
         <tags>
             
-            <tag> First </tag>
+            <tag> 工具 </tag>
             
-            <tag> Second </tag>
+            <tag> python </tag>
             
         </tags>
       
